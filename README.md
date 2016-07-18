@@ -1,3 +1,3 @@
-# README
+# website url
 
-http://www.re2x.com
+http://www.re2x.com/blog/
