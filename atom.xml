@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://www.re2x.com/"/>
-  <updated>2016-07-18T07:26:10.000Z</updated>
+  <updated>2016-07-18T08:03:00.000Z</updated>
   <id>http://www.re2x.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.re2x.com/hybrid-app-brief-talk/"/>
     <id>http://www.re2x.com/hybrid-app-brief-talk/</id>
     <published>2016-07-18T03:44:06.000Z</published>
-    <updated>2016-07-18T07:26:10.000Z</updated>
+    <updated>2016-07-18T08:03:00.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;浅谈Hybrid-App开发&quot;&gt;&lt;a href=&quot;#浅谈Hybrid-App开发&quot; class=&quot;headerlink&quot; title=&quot;浅谈Hybrid App开发&quot;&gt;&lt;/a&gt;浅谈Hybrid App开发&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;我们常说的：在Android、iOS上的用H5来做界面&lt;/p&gt;
@@ -60,6 +60,7 @@
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h1 id=&quot;常见App开发模式&quot;&gt;&lt;a href=&quot;#常见App开发模式&quot; class=&quot;headerlink&quot; title=&quot;常见App开发模式&quot;&gt;&lt;/a&gt;常见App开发模式&lt;/h1&gt;&lt;h2 id=&quot;Native-App&quot;&gt;&lt;a href=&quot;#Native-App&quot; class=&quot;headerlink&quot; title=&quot;Native App&quot;&gt;&lt;/a&gt;Native App&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Native App，原生APP，一般依托于操作系统，有很强的交互，是一个完整的App，可拓展性强。需要用户下载安装使用。&lt;strong&gt;原生开发人员数量众多，技术已成熟&lt;/strong&gt;。Android用Java语言，开发环境用android studio或Eclips等IDE；iOS用oc、swift，Mac+Xcode开发环境；WP用C#/C++，windows+Visual studio环境。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -276,7 +277,43 @@
     <summary type="html">
     
       &lt;h1 id=&quot;浅谈Hybrid-App开发&quot;&gt;&lt;a href=&quot;#浅谈Hybrid-App开发&quot; class=&quot;headerlink&quot; title=&quot;浅谈Hybrid App开发&quot;&gt;&lt;/a&gt;浅谈Hybrid App开发&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;我们常说的：在An
+&lt;p&gt;我们常说的：在Android、iOS上的用H5来做界面&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我们把档次稍微提高一下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;今天和大家分享的是&lt;strong&gt; Hybrid App 的开发&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Hybrid App开发&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它不是手机网页开发、不是html、不是h5，但又都是&lt;/li&gt;
+&lt;li&gt;做这个需要懂iOS、Android，还要懂html、js、css&lt;/li&gt;
+&lt;li&gt;最麻烦的还是兼容性，主要的工作还是在web开发上&lt;/li&gt;
+&lt;li&gt;已是主流了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/post_images/hybrid-app-brief-talk-01.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;为什么要谈Hybrid-App开发&quot;&gt;&lt;a href=&quot;#为什么要谈Hybrid-App开发&quot; class=&quot;headerlink&quot; title=&quot;为什么要谈Hybrid App开发&quot;&gt;&lt;/a&gt;为什么要谈Hybrid App开发&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;h2 id=&quot;我们现在的App就是Hybrid-App&quot;&gt;&lt;a href=&quot;#我们现在的App就是Hybrid-App&quot; class=&quot;headerlink&quot; title=&quot;我们现在的App就是Hybrid App&quot;&gt;&lt;/a&gt;我们现在的App就是Hybrid App&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;所以我们做得比较简单&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;h2 id=&quot;主流，基本上现在常用的App都是Hybrid-App&quot;&gt;&lt;a href=&quot;#主流，基本上现在常用的App都是Hybrid-App&quot; class=&quot;headerlink&quot; title=&quot;主流，基本上现在常用的App都是Hybrid App&quot;&gt;&lt;/a&gt;主流，基本上现在常用的App都是Hybrid App&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;AppStore、Instagram、微信(公众号、钱包)、支付宝（城市服务、电影、）、美团、滴滴、京东、汽车之家、联通手机营业厅……&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;h2 id=&quot;快速迭代，在不更新APP的情况下，修改、新增功能&quot;&gt;&lt;a href=&quot;#快速迭代，在不更新APP的情况下，修改、新增功能&quot; class=&quot;headerlink&quot; title=&quot;快速迭代，在不更新APP的情况下，修改、新增功能&quot;&gt;&lt;/a&gt;快速迭代，在不更新APP的情况下，修改、新增功能&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;例如：我们的新版首页，只要在服务器更新了，我的APP可以很快增加一个弱交互的模块；发现一些bug，也可以直接热修复&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;h2 id=&quot;开发统一，不管是Android、iOS，甚至是WP都可以统一开发，减少各个平台功能不统一的问题&quot;&gt;&lt;a href=&quot;#开发统一，不管是Android、iOS，甚至是WP都可以统一开发，减少各个平台功能不统一的问题&quot; class=&quot;headerlink&quot; title=&quot;开发统一，不管是Android、iOS，甚至是WP都可以统一开发，减少各个平台功能不统一的问题&quot;&gt;&lt;/a&gt;开发统一，不管是Android、iOS，甚至是WP都可以统一开发，减少各个平台功能不统一的问题&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;1.原生开发专注于底层核心模块的开发、优化，封装好与web的交互接口。web实现功能模块后，所有端都无需重新开发&lt;/p&gt;
+&lt;p&gt;2.例如：视频直播。原生开发专注与视频推流、视频播放、聊天功能的开发、优化，消息推送等，用web实现直播列表、直播创建等展示、数据编辑功能开发。相互之间定义好调用接口即可。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;h2 id=&quot;总结我们现在混合开发发现的问题，优化我们的App&quot;&gt;&lt;a href=&quot;#总结我们现在混合开发发现的问题，优化我们的App&quot; class=&quot;headerlink&quot; title=&quot;总结我们现在混合开发发现的问题，优化我们的App&quot;&gt;&lt;/a&gt;总结我们现在混合开发发现的问题，优化我们的App&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;我们可以做得更好&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
