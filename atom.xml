@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>rex_lin</title>
   <subtitle>print &quot;hello world&quot;</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://www.re2x.com/"/>
-  <updated>2016-07-15T07:54:06.000Z</updated>
+  <updated>2016-07-18T04:00:55.000Z</updated>
   <id>http://www.re2x.com/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浅谈Hybrid App</title>
+    <link href="http://www.re2x.com/2016/07/18/hybrid-app-brief-talk/"/>
+    <id>http://www.re2x.com/2016/07/18/hybrid-app-brief-talk/</id>
+    <published>2016-07-18T03:44:06.000Z</published>
+    <updated>2016-07-18T04:00:55.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;浅谈Hybrid-App开发&quot;&gt;&lt;a href=&quot;#浅谈Hybrid-App开发&quot; class=&quot;headerlink&quot; title=&quot;浅谈Hybrid App开发&quot;&gt;&lt;/a&gt;浅谈Hybrid App开发&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;我们常说的：在Android、iOS上的用H5来做界面&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我们把档次稍微提高一下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;今天和大家分享的是&lt;strong&gt; Hybrid App 的开发&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Hybrid App开发&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它不是手机网页开发、不是html、不是h5，但又都是&lt;/li&gt;
+&lt;li&gt;做这个需要懂iOS、Android，还要懂html、js、css&lt;/li&gt;
+&lt;li&gt;最麻烦的还是兼容性，主要的工作还是在web开发上&lt;/li&gt;
+&lt;li&gt;已是主流了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/post_images/hybrid-app-brief-talk-01.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;浅谈Hybrid-App开发&quot;&gt;&lt;a href=&quot;#浅谈Hybrid-App开发&quot; class=&quot;headerlink&quot; title=&quot;浅谈Hybrid App开发&quot;&gt;&lt;/a&gt;浅谈Hybrid App开发&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;我们常说的：在An
+    
+    </summary>
+    
+      <category term="App开发" scheme="http://www.re2x.com/categories/App%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Hybrid,H5,混合开发" scheme="http://www.re2x.com/tags/Hybrid-H5-%E6%B7%B7%E5%90%88%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
