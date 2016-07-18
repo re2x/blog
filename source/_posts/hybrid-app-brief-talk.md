@@ -187,8 +187,8 @@ Facebook出品，初次学习成本很高，但优势是“Learn once, write any
 1. 流畅性一定要好
 2. 完美兼容Android4.0以上、iOS7.0以上系统
 2. 不要出现这种情况
-   * 网络不好的情况下完全空白的现实 ![空白](2.pic.jpg)
- * 404，502之类的不直观提示   ![502](QQ20160421-0@2x.png)
+   * 网络不好的情况下完全空白的现实 ![空白](/blog/post_images/hybrid-app-brief-talk-02.jpg)
+ * 404，502之类的不直观提示   ![502](/blog/post_images/hybrid-app-brief-talk-03.png)
 
 
 ## 缓存
@@ -214,9 +214,9 @@ Facebook出品，初次学习成本很高，但优势是“Learn once, write any
 > Url: **loadData.php?id=abcd&title=Title&title_buttons=Add**
 > 
 > 那么当App加载这个地址时服务器会返回**id=abcd**的数据，同时App检测到title和buttons参数，会显示**Title标题**，然后在标题栏上加上**新增按钮**。这些都不用等到网页加载出来。
-![加载中](QQ20160421-1@2x.png)
+![加载中](/blog/post_images/hybrid-app-brief-talk-04.png)
 1. 在加载的过程中把webview隐藏，等到web加载成功后，在通过动画效果之类的把webview展示出来，避免用户看到整个web的渲染过程。特别是html已经渲染出来，但是css或js还没有完成，用户看到的就是一个**不正常的界面**了。
-![渲染中](1.pic.jpg)
+![渲染中](/blog/post_images/hybrid-app-brief-talk-05.jpg)
 
 1. App中web部分的实现，要更多考虑细节的，因为web实现的界面，天生就缺乏一些原生自带的特性。细节处理不到位，会显得App很粗糙。
 

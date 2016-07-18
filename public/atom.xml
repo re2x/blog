@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://www.re2x.com/"/>
-  <updated>2016-07-18T06:54:11.000Z</updated>
+  <updated>2016-07-18T07:26:10.000Z</updated>
   <id>http://www.re2x.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.re2x.com/hybrid-app-brief-talk/"/>
     <id>http://www.re2x.com/hybrid-app-brief-talk/</id>
     <published>2016-07-18T03:44:06.000Z</published>
-    <updated>2016-07-18T06:54:11.000Z</updated>
+    <updated>2016-07-18T07:26:10.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;浅谈Hybrid-App开发&quot;&gt;&lt;a href=&quot;#浅谈Hybrid-App开发&quot; class=&quot;headerlink&quot; title=&quot;浅谈Hybrid App开发&quot;&gt;&lt;/a&gt;浅谈Hybrid App开发&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;我们常说的：在Android、iOS上的用H5来做界面&lt;/p&gt;
@@ -219,8 +219,8 @@
 &lt;li&gt;流畅性一定要好&lt;/li&gt;
 &lt;li&gt;完美兼容Android4.0以上、iOS7.0以上系统&lt;/li&gt;
 &lt;li&gt;不要出现这种情况&lt;ul&gt;
-&lt;li&gt;网络不好的情况下完全空白的现实 &lt;img src=&quot;2.pic.jpg&quot; alt=&quot;空白&quot;&gt;&lt;/li&gt;
-&lt;li&gt;404，502之类的不直观提示   &lt;img src=&quot;QQ20160421-0@2x.png&quot; alt=&quot;502&quot;&gt;&lt;/li&gt;
+&lt;li&gt;网络不好的情况下完全空白的现实 &lt;img src=&quot;/blog/post_images/hybrid-app-brief-talk-02.jpg&quot; alt=&quot;空白&quot;&gt;&lt;/li&gt;
+&lt;li&gt;404，502之类的不直观提示   &lt;img src=&quot;/blog/post_images/hybrid-app-brief-talk-03.png&quot; alt=&quot;502&quot;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -247,10 +247,10 @@
 &lt;li&gt;&lt;p&gt;在Url里面定义好需要原生展示的内容、或执行的方法，例如： &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Url: &lt;strong&gt;loadData.php?id=abcd&amp;amp;title=Title&amp;amp;title_buttons=Add&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;那么当App加载这个地址时服务器会返回&lt;strong&gt;id=abcd&lt;/strong&gt;的数据，同时App检测到title和buttons参数，会显示&lt;strong&gt;Title标题&lt;/strong&gt;，然后在标题栏上加上&lt;strong&gt;新增按钮&lt;/strong&gt;。这些都不用等到网页加载出来。&lt;br&gt;&lt;img src=&quot;QQ20160421-1@2x.png&quot; alt=&quot;加载中&quot;&gt;&lt;/p&gt;
+&lt;p&gt;那么当App加载这个地址时服务器会返回&lt;strong&gt;id=abcd&lt;/strong&gt;的数据，同时App检测到title和buttons参数，会显示&lt;strong&gt;Title标题&lt;/strong&gt;，然后在标题栏上加上&lt;strong&gt;新增按钮&lt;/strong&gt;。这些都不用等到网页加载出来。&lt;br&gt;&lt;img src=&quot;/blog/post_images/hybrid-app-brief-talk-04.png&quot; alt=&quot;加载中&quot;&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在加载的过程中把webview隐藏，等到web加载成功后，在通过动画效果之类的把webview展示出来，避免用户看到整个web的渲染过程。特别是html已经渲染出来，但是css或js还没有完成，用户看到的就是一个&lt;strong&gt;不正常的界面&lt;/strong&gt;了。&lt;br&gt;&lt;img src=&quot;1.pic.jpg&quot; alt=&quot;渲染中&quot;&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;在加载的过程中把webview隐藏，等到web加载成功后，在通过动画效果之类的把webview展示出来，避免用户看到整个web的渲染过程。特别是html已经渲染出来，但是css或js还没有完成，用户看到的就是一个&lt;strong&gt;不正常的界面&lt;/strong&gt;了。&lt;br&gt;&lt;img src=&quot;/blog/post_images/hybrid-app-brief-talk-05.jpg&quot; alt=&quot;渲染中&quot;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;App中web部分的实现，要更多考虑细节的，因为web实现的界面，天生就缺乏一些原生自带的特性。细节处理不到位，会显得App很粗糙。&lt;/p&gt;
 &lt;/li&gt;
