@@ -4,9 +4,9 @@
   <subtitle>print &quot;hello world&quot;</subtitle>
   <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="http://www.re2x.com/"/>
+  <link href="https://re2x.com/"/>
   <updated>2016-07-18T08:05:37.000Z</updated>
-  <id>http://www.re2x.com/</id>
+  <id>https://re2x.com/</id>
   
   <author>
     <name>rex_lin</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>浅谈Hybrid App</title>
-    <link href="http://www.re2x.com/hybrid-app-brief-talk/"/>
-    <id>http://www.re2x.com/hybrid-app-brief-talk/</id>
+    <link href="https://re2x.com/hybrid-app-brief-talk/"/>
+    <id>https://re2x.com/hybrid-app-brief-talk/</id>
     <published>2016-07-18T03:44:06.000Z</published>
     <updated>2016-07-18T08:05:37.000Z</updated>
     
@@ -317,14 +317,14 @@
     
     </summary>
     
-      <category term="App" scheme="http://www.re2x.com/categories/App/"/>
+      <category term="App" scheme="https://re2x.com/categories/App/"/>
     
     
-      <category term="Hybrid" scheme="http://www.re2x.com/tags/Hybrid/"/>
+      <category term="Hybrid" scheme="https://re2x.com/tags/Hybrid/"/>
     
-      <category term="H5" scheme="http://www.re2x.com/tags/H5/"/>
+      <category term="H5" scheme="https://re2x.com/tags/H5/"/>
     
-      <category term="混合开发" scheme="http://www.re2x.com/tags/%E6%B7%B7%E5%90%88%E5%BC%80%E5%8F%91/"/>
+      <category term="混合开发" scheme="https://re2x.com/tags/%E6%B7%B7%E5%90%88%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
