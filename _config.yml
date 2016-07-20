@@ -14,7 +14,7 @@ duoshuo_shortname: rexlog
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.re2x.com
+url: https://re2x.com
 root: /blog/
 #permalink: :year/:month/:day/:title/
 permalink: :title/

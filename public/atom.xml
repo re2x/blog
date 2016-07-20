@@ -4,9 +4,9 @@
   <subtitle>print &quot;hello world&quot;</subtitle>
   <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="http://www.re2x.com/"/>
-  <updated>2016-07-18T08:03:00.000Z</updated>
-  <id>http://www.re2x.com/</id>
+  <link href="https://re2x.com/"/>
+  <updated>2016-07-20T04:31:23.000Z</updated>
+  <id>https://re2x.com/</id>
   
   <author>
     <name>rex_lin</name>
@@ -16,11 +16,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>思而不学则die</title>
+    <link href="https://re2x.com/%E6%80%9D%E8%80%8C%E4%B8%8D%E5%AD%A6%E5%88%99die/"/>
+    <id>https://re2x.com/思而不学则die/</id>
+    <published>2016-07-20T04:04:11.000Z</published>
+    <updated>2016-07-20T04:31:23.000Z</updated>
+    
+    <content type="html">&lt;p&gt;王小波最推崇的一段台词，来自英若诚翻译的萧伯纳名剧《芭芭拉少校》&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt; 大军火商安德谢夫与儿子斯蒂文的对白。安德谢夫：“你到底知道什么？，关心什么？”斯蒂文：“我知道什么是对的，什么是错的。”安德谢夫：“不可思议！对工商业深恶痛绝，对法律一无所知，和文学艺术无缘，对哲学毫无野心，可是掌握了人世间最大的秘密，叫历代哲学家猜不透的，叫古今律师无法解释的，叫工商业大亨糊里糊涂的，叫艺术家走投无路的，你居然掌握了这个秘密，你知道什么是对的，什么是错的。天哪，你是天才，你是大师中的大师，你是神！才二十四岁！”&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;王小波最推崇的一段台词，来自英若诚翻译的萧伯纳名剧《芭芭拉少校》&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt; 大军火商安德谢夫与儿子斯蒂文的对白。安德谢夫：“你到底知道什么？，关心什么？”斯蒂文：“我知道什么是对的，什么是错的。”安德谢夫：“不可思议！对工商业深恶痛绝，对法律
+    
+    </summary>
+    
+      <category term="杂文" scheme="https://re2x.com/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+      <category term="台词" scheme="https://re2x.com/tags/%E5%8F%B0%E8%AF%8D/"/>
+    
+      <category term="王小波" scheme="https://re2x.com/tags/%E7%8E%8B%E5%B0%8F%E6%B3%A2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>浅谈Hybrid App</title>
-    <link href="http://www.re2x.com/hybrid-app-brief-talk/"/>
-    <id>http://www.re2x.com/hybrid-app-brief-talk/</id>
+    <link href="https://re2x.com/hybrid-app-brief-talk/"/>
+    <id>https://re2x.com/hybrid-app-brief-talk/</id>
     <published>2016-07-18T03:44:06.000Z</published>
-    <updated>2016-07-18T08:03:00.000Z</updated>
+    <updated>2016-07-18T08:05:37.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;浅谈Hybrid-App开发&quot;&gt;&lt;a href=&quot;#浅谈Hybrid-App开发&quot; class=&quot;headerlink&quot; title=&quot;浅谈Hybrid App开发&quot;&gt;&lt;/a&gt;浅谈Hybrid App开发&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;我们常说的：在Android、iOS上的用H5来做界面&lt;/p&gt;
@@ -317,45 +347,14 @@
     
     </summary>
     
-      <category term="App" scheme="http://www.re2x.com/categories/App/"/>
+      <category term="App" scheme="https://re2x.com/categories/App/"/>
     
     
-      <category term="Hybrid" scheme="http://www.re2x.com/tags/Hybrid/"/>
+      <category term="Hybrid" scheme="https://re2x.com/tags/Hybrid/"/>
     
-      <category term="H5" scheme="http://www.re2x.com/tags/H5/"/>
+      <category term="H5" scheme="https://re2x.com/tags/H5/"/>
     
-      <category term="混合开发" scheme="http://www.re2x.com/tags/%E6%B7%B7%E5%90%88%E5%BC%80%E5%8F%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>这是一个中文标题混和English</title>
-    <link href="http://www.re2x.com/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E4%B8%AD%E6%96%87%E6%A0%87%E9%A2%98%E6%B7%B7%E5%92%8CEnglish/"/>
-    <id>http://www.re2x.com/这是一个中文标题混和English/</id>
-    <published>2016-07-06T02:00:56.000Z</published>
-    <updated>2016-07-18T07:49:47.000Z</updated>
-    
-    <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo server&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo generate&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/generating.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Generating&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Deploy-to-remote-sites&quot;&gt;&lt;a href=&quot;#Deploy-to-remote-sites&quot; class=&quot;headerlink&quot; title=&quot;Deploy to remote sites&quot;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo deploy&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/deployment.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
-      <category term="Test Categories" scheme="http://www.re2x.com/categories/Test-Categories/"/>
-    
-    
-      <category term="Test" scheme="http://www.re2x.com/tags/Test/"/>
+      <category term="混合开发" scheme="https://re2x.com/tags/%E6%B7%B7%E5%90%88%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
