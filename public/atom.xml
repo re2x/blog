@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>rex_lin</title>
+  <title>rex_log</title>
   <subtitle>print &quot;hello world&quot;</subtitle>
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://re2x.com/"/>
-  <updated>2016-07-20T04:31:23.000Z</updated>
+  <updated>2016-07-29T06:50:46.000Z</updated>
   <id>https://re2x.com/</id>
   
   <author>
@@ -14,6 +14,47 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Highcharts Demo 2例</title>
+    <link href="https://re2x.com/highcharts-2-demo/"/>
+    <id>https://re2x.com/highcharts-2-demo/</id>
+    <published>2016-07-29T06:40:34.000Z</published>
+    <updated>2016-07-29T06:50:46.000Z</updated>
+    
+    <content type="html">&lt;p&gt;最近在项目中用到了highcharts来实现图表功能，做了2个demo给相关的同事&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://re2x.com/demo/charts/charts_demo.html&quot;&gt;最近7日数据&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;https://re2x.com/demo/charts/charts_demo.html&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://re2x.com/demo/bp-charts/charts-demo.html?show=31&quot;&gt;血压数据&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;https://re2x.com/demo/bp-charts/charts-demo.html?show=31&quot;&gt;&lt;/iframe&gt;
+
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在项目中用到了highcharts来实现图表功能，做了2个demo给相关的同事&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://re2x.com/demo/charts/charts_demo.html&quot;&gt;最近7日数据&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ifr
+    
+    </summary>
+    
+      <category term="Demo" scheme="https://re2x.com/categories/Demo/"/>
+    
+    
+      <category term="Highcharts" scheme="https://re2x.com/tags/Highcharts/"/>
+    
+      <category term="Demo" scheme="https://re2x.com/tags/Demo/"/>
+    
+      <category term="图表" scheme="https://re2x.com/tags/%E5%9B%BE%E8%A1%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>思而不学则die</title>
