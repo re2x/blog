@@ -15,7 +15,7 @@ categories:
 
 <iframe style="border:none;width:100%;height:250px;" src="https://re2x.com/demo/charts/charts_demo.html"></iframe>
 
-* [血压数据](https://re2x.com/demo/bp-charts/charts-demo.html?show=31)
+* [血压数据](https://re2x.com/demo/bp-charts/charts-demo.html?show=14&dl=1)
 
 <iframe style="border:none;width:100%;height:250px;" src="https://re2x.com/demo/bp-charts/charts-demo.html?show=31"></iframe>
 
