@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://re2x.com/"/>
-  <updated>2016-09-06T06:53:52.000Z</updated>
+  <updated>2016-09-06T07:21:14.000Z</updated>
   <id>https://re2x.com/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="https://re2x.com/apprtc-note-0/"/>
     <id>https://re2x.com/apprtc-note-0/</id>
     <published>2016-08-17T02:00:32.000Z</published>
-    <updated>2016-09-06T06:53:52.000Z</updated>
+    <updated>2016-09-06T07:21:14.000Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;AppRTC介绍&quot;&gt;&lt;a href=&quot;#AppRTC介绍&quot; class=&quot;headerlink&quot; title=&quot;AppRTC介绍&quot;&gt;&lt;/a&gt;AppRTC介绍&lt;/h1&gt;&lt;h1 id=&quot;AppRTC服务组件&quot;&gt;&lt;a href=&quot;#AppRTC服务组件&quot; class=&quot;headerlink&quot; title=&quot;AppRTC服务组件&quot;&gt;&lt;/a&gt;AppRTC服务组件&lt;/h1&gt;&lt;h2 id=&quot;业务服务器-AppRTC&quot;&gt;&lt;a href=&quot;#业务服务器-AppRTC&quot; class=&quot;headerlink&quot; title=&quot;业务服务器 AppRTC&quot;&gt;&lt;/a&gt;业务服务器 &lt;a href=&quot;https://github.com/webrtc/apprtc&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AppRTC&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+    <content type="html">&lt;h1 id=&quot;0x00-AppRTC介绍&quot;&gt;&lt;a href=&quot;#0x00-AppRTC介绍&quot; class=&quot;headerlink&quot; title=&quot;0x00 AppRTC介绍&quot;&gt;&lt;/a&gt;0x00 AppRTC介绍&lt;/h1&gt;&lt;h1 id=&quot;0x01-AppRTC服务组件&quot;&gt;&lt;a href=&quot;#0x01-AppRTC服务组件&quot; class=&quot;headerlink&quot; title=&quot;0x01 AppRTC服务组件&quot;&gt;&lt;/a&gt;0x01 AppRTC服务组件&lt;/h1&gt;&lt;h2 id=&quot;业务服务器-AppRTC&quot;&gt;&lt;a href=&quot;#业务服务器-AppRTC&quot; class=&quot;headerlink&quot; title=&quot;业务服务器 AppRTC&quot;&gt;&lt;/a&gt;业务服务器 &lt;a href=&quot;https://github.com/webrtc/apprtc&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AppRTC&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;参数：&lt;a href=&quot;https://appr.tc/params.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://appr.tc/params.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;信令服务器-Collider&quot;&gt;&lt;a href=&quot;#信令服务器-Collider&quot; class=&quot;headerlink&quot; title=&quot;信令服务器 Collider&quot;&gt;&lt;/a&gt;信令服务器 &lt;a href=&quot;https://github.com/webrtc/apprtc/blob/master/src/collider/README.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Collider&lt;/a&gt;&lt;/h2&gt;&lt;h2 id=&quot;TURN（ICE）服务器-Coturn&quot;&gt;&lt;a href=&quot;#TURN（ICE）服务器-Coturn&quot; class=&quot;headerlink&quot; title=&quot;TURN（ICE）服务器 Coturn&quot;&gt;&lt;/a&gt;TURN（ICE）服务器 &lt;a href=&quot;https://github.com/coturn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Coturn&lt;/a&gt;&lt;/h2&gt;&lt;h1 id=&quot;AppRTC部署过程&quot;&gt;&lt;a href=&quot;#AppRTC部署过程&quot; class=&quot;headerlink&quot; title=&quot;AppRTC部署过程&quot;&gt;&lt;/a&gt;AppRTC部署过程&lt;/h1&gt;&lt;h2 id=&quot;部署AppRTC-参考&quot;&gt;&lt;a href=&quot;#部署AppRTC-参考&quot; class=&quot;headerlink&quot; title=&quot;部署AppRTC 参考&quot;&gt;&lt;/a&gt;部署AppRTC &lt;a href=&quot;https://github.com/webrtc/apprtc#deployment&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;h2 id=&quot;信令服务器-Collider&quot;&gt;&lt;a href=&quot;#信令服务器-Collider&quot; class=&quot;headerlink&quot; title=&quot;信令服务器 Collider&quot;&gt;&lt;/a&gt;信令服务器 &lt;a href=&quot;https://github.com/webrtc/apprtc/blob/master/src/collider/README.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Collider&lt;/a&gt;&lt;/h2&gt;&lt;h2 id=&quot;TURN（ICE）服务器-Coturn&quot;&gt;&lt;a href=&quot;#TURN（ICE）服务器-Coturn&quot; class=&quot;headerlink&quot; title=&quot;TURN（ICE）服务器 Coturn&quot;&gt;&lt;/a&gt;TURN（ICE）服务器 &lt;a href=&quot;https://github.com/coturn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Coturn&lt;/a&gt;&lt;/h2&gt;&lt;h1 id=&quot;0x02-AppRTC部署过程&quot;&gt;&lt;a href=&quot;#0x02-AppRTC部署过程&quot; class=&quot;headerlink&quot; title=&quot;0x02 AppRTC部署过程&quot;&gt;&lt;/a&gt;0x02 AppRTC部署过程&lt;/h1&gt;&lt;h2 id=&quot;部署AppRTC-参考&quot;&gt;&lt;a href=&quot;#部署AppRTC-参考&quot; class=&quot;headerlink&quot; title=&quot;部署AppRTC 参考&quot;&gt;&lt;/a&gt;部署AppRTC &lt;a href=&quot;https://github.com/webrtc/apprtc#deployment&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;AppRTC是需要用到&lt;a href=&quot;https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Google App Engine SDK for Python &lt;/a&gt;和&lt;a href=&quot;http://gruntjs.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Grunt&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ol&gt;
@@ -74,7 +74,7 @@
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&quot;启动服务&quot;&gt;&lt;a href=&quot;#启动服务&quot; class=&quot;headerlink&quot; title=&quot;启动服务&quot;&gt;&lt;/a&gt;启动服务&lt;/h1&gt;&lt;h2 id=&quot;启动apprtc&quot;&gt;&lt;a href=&quot;#启动apprtc&quot; class=&quot;headerlink&quot; title=&quot;启动apprtc&quot;&gt;&lt;/a&gt;启动apprtc&lt;/h2&gt;&lt;ol&gt;
+&lt;h1 id=&quot;0x03-启动服务&quot;&gt;&lt;a href=&quot;#0x03-启动服务&quot; class=&quot;headerlink&quot; title=&quot;0x03 启动服务&quot;&gt;&lt;/a&gt;0x03 启动服务&lt;/h1&gt;&lt;h2 id=&quot;启动apprtc&quot;&gt;&lt;a href=&quot;#启动apprtc&quot; class=&quot;headerlink&quot; title=&quot;启动apprtc&quot;&gt;&lt;/a&gt;启动apprtc&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;cd到apprtc目录，执行：&lt;blockquote&gt;
 &lt;p&gt;dev_appserver.py –host 0.0.0.0 ./out/app_engine&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -98,12 +98,12 @@
 &lt;h2 id=&quot;测试&quot;&gt;&lt;a href=&quot;#测试&quot; class=&quot;headerlink&quot; title=&quot;测试&quot;&gt;&lt;/a&gt;测试&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://test.webrtc.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://test.webrtc.org/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h1&gt;&lt;p&gt;1.&lt;a href=&quot;http://www.jianshu.com/p/c55ecf5a3fcf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;自建 AppRTC&lt;/a&gt;&lt;br&gt;2.&lt;a href=&quot;http://io.diveinedu.com/2015/02/05/%E7%AC%AC%E5%85%AD%E7%AB%A0-WebRTC%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第六章 WebRTC服务器搭建&lt;/a&gt;&lt;br&gt;3.&lt;a href=&quot;http://www.hankcs.com/program/network/actual-rfc5766-turn-server-and-ice4j-wide-area-network-communication.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;实战rfc5766-turn-server和ice4j广域网通讯&lt;/a&gt;&lt;br&gt;4.&lt;a href=&quot;https://webrtc.github.io/samples/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WebRTC samples&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;0x04参考&quot;&gt;&lt;a href=&quot;#0x04参考&quot; class=&quot;headerlink&quot; title=&quot;0x04参考&quot;&gt;&lt;/a&gt;0x04参考&lt;/h1&gt;&lt;p&gt;1.&lt;a href=&quot;http://www.jianshu.com/p/c55ecf5a3fcf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;自建 AppRTC&lt;/a&gt;&lt;br&gt;2.&lt;a href=&quot;http://io.diveinedu.com/2015/02/05/%E7%AC%AC%E5%85%AD%E7%AB%A0-WebRTC%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第六章 WebRTC服务器搭建&lt;/a&gt;&lt;br&gt;3.&lt;a href=&quot;http://www.hankcs.com/program/network/actual-rfc5766-turn-server-and-ice4j-wide-area-network-communication.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;实战rfc5766-turn-server和ice4j广域网通讯&lt;/a&gt;&lt;br&gt;4.&lt;a href=&quot;https://webrtc.github.io/samples/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WebRTC samples&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;AppRTC介绍&quot;&gt;&lt;a href=&quot;#AppRTC介绍&quot; class=&quot;headerlink&quot; title=&quot;AppRTC介绍&quot;&gt;&lt;/a&gt;AppRTC介绍&lt;/h1&gt;&lt;h1 id=&quot;AppRTC服务组件&quot;&gt;&lt;a href=&quot;#AppRTC服务组件&quot; class=&quot;
+      &lt;h1 id=&quot;0x00-AppRTC介绍&quot;&gt;&lt;a href=&quot;#0x00-AppRTC介绍&quot; class=&quot;headerlink&quot; title=&quot;0x00 AppRTC介绍&quot;&gt;&lt;/a&gt;0x00 AppRTC介绍&lt;/h1&gt;&lt;h1 id=&quot;0x01-AppRTC服务组件&quot;&gt;&lt;a h
     
     </summary>
     
