@@ -276,6 +276,214 @@
             
               
                 
+                <a class="post-title-link" href="/blog/apprtc-note-0/" itemprop="url">
+                  AppRTC服务器部署资料整理
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-17T10:00:32+08:00" content="2016-08-17">
+              2016-08-17
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/blog/categories/WebRTC/" itemprop="url" rel="index">
+                    <span itemprop="name">WebRTC</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/blog/categories/WebRTC/AppRTC/" itemprop="url" rel="index">
+                    <span itemprop="name">AppRTC</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/blog/apprtc-note-0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="apprtc-note-0/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="AppRTC介绍"><a href="#AppRTC介绍" class="headerlink" title="AppRTC介绍"></a>AppRTC介绍</h1><h1 id="AppRTC服务组件"><a href="#AppRTC服务组件" class="headerlink" title="AppRTC服务组件"></a>AppRTC服务组件</h1><h2 id="业务服务器-AppRTC"><a href="#业务服务器-AppRTC" class="headerlink" title="业务服务器 AppRTC"></a>业务服务器 <a href="https://github.com/webrtc/apprtc" target="_blank" rel="external">AppRTC</a></h2><ul>
+<li>参数：<a href="https://appr.tc/params.html" target="_blank" rel="external">https://appr.tc/params.html</a></li>
+</ul>
+<h2 id="信令服务器-Collider"><a href="#信令服务器-Collider" class="headerlink" title="信令服务器 Collider"></a>信令服务器 <a href="https://github.com/webrtc/apprtc/blob/master/src/collider/README.md" target="_blank" rel="external">Collider</a></h2><h2 id="TURN（ICE）服务器-Coturn"><a href="#TURN（ICE）服务器-Coturn" class="headerlink" title="TURN（ICE）服务器 Coturn"></a>TURN（ICE）服务器 <a href="https://github.com/coturn" target="_blank" rel="external">Coturn</a></h2><h1 id="AppRTC部署过程"><a href="#AppRTC部署过程" class="headerlink" title="AppRTC部署过程"></a>AppRTC部署过程</h1><h2 id="部署AppRTC-参考"><a href="#部署AppRTC-参考" class="headerlink" title="部署AppRTC 参考"></a>部署AppRTC <a href="https://github.com/webrtc/apprtc#deployment" target="_blank" rel="external">参考</a></h2><blockquote>
+<p>AppRTC是需要用到<a href="https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python" target="_blank" rel="external">Google App Engine SDK for Python </a>和<a href="http://gruntjs.com/" target="_blank" rel="external">Grunt</a></p>
+</blockquote>
+<ol>
+<li><p>源码下载 </p>
+<blockquote>
+<p>git clone <a href="https://github.com/webrtc/apprtc.git" target="_blank" rel="external">https://github.com/webrtc/apprtc.git</a></p>
+</blockquote>
+</li>
+<li></li>
+</ol>
+<h2 id="部署Collider-参考"><a href="#部署Collider-参考" class="headerlink" title="部署Collider 参考"></a>部署Collider <a href="https://github.com/webrtc/apprtc/blob/master/src/collider/README.md" target="_blank" rel="external">参考</a></h2><blockquote>
+<p>Collider是GO开发的，所以需要安装Go环境，安装参考 <a href="http://golang.org/doc/install" target="_blank" rel="external">http://golang.org/doc/install</a> and <a href="http://golang.org/doc/code.html" target="_blank" rel="external">http://golang.org/doc/code.html</a></p>
+</blockquote>
+<ol>
+<li><p>源码位于apprtc/src/collider/collider</p>
+</li>
+<li><p>确定你已经设置<code>GOPATH</code>环境变量，例如：<code>export GOPATH=$HOME/goWorkspace</code></p>
+</li>
+<li><p>复制一份源码到$GOPATH/src</p>
+<blockquote>
+<p>cp -r apprtc/src/collider $GOPATH/src</p>
+</blockquote>
+</li>
+<li><p>安装依赖性 </p>
+<blockquote>
+<p>go get collidermain</p>
+</blockquote>
+</li>
+<li><p>安装 collidermain </p>
+<blockquote>
+<p>go install collidermain</p>
+</blockquote>
+</li>
+<li><p>启动 collidermain </p>
+<blockquote>
+<p>$GOPATH/bin/collidermain -port=8089 -tls=false -room-server=<a href="http://47.88.32.224:8080" target="_blank" rel="external">http://47.88.32.224:8080</a></p>
+</blockquote>
+</li>
+</ol>
+<h2 id="部署Coturn"><a href="#部署Coturn" class="headerlink" title="部署Coturn"></a>部署Coturn</h2><ol>
+<li><p>源码下载 <code>http://turnserver.open-sys.org/downloads/v4.5.0.3/</code></p>
+</li>
+<li><p>生成加密用的密钥 </p>
+<blockquote>
+<p>sudo openssl req -x509 -newkey rsa:2048 -keyout /usr/local/etc/turn_server_pkey.pem -out /usr/local/etc/turn_server_cert.pem -days 99999 -nodes</p>
+</blockquote>
+</li>
+</ol>
+<h1 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h1><h2 id="启动apprtc"><a href="#启动apprtc" class="headerlink" title="启动apprtc"></a>启动apprtc</h2><ol>
+<li>cd到apprtc目录，执行：<blockquote>
+<p>dev_appserver.py –host 0.0.0.0 ./out/app_engine</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="启动collider"><a href="#启动collider" class="headerlink" title="启动collider"></a>启动collider</h2><ol>
+<li>cd到$GOPATH/bin目录，执行：<blockquote>
+<p>$GOPATH/bin/collidermain -port=8089 -tls=false -room-server=”<a href="http://47.88.32.224:8080" target="_blank" rel="external">http://47.88.32.224:8080</a>“</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="启动coturn"><a href="#启动coturn" class="headerlink" title="启动coturn"></a>启动coturn</h2><h3 id="命令行参数启动"><a href="#命令行参数启动" class="headerlink" title="命令行参数启动"></a>命令行参数启动</h3><blockquote>
+<p>turnserver -a -v -n –no-dtls –no-tls -u linzq:linzq -r “apprtc”</p>
+</blockquote>
+<h3 id="配置文件启动"><a href="#配置文件启动" class="headerlink" title="配置文件启动"></a>配置文件启动</h3><blockquote>
+<p>turnserver -c /etc/turnserver/turnserver.conf</p>
+</blockquote>
+<h3 id="服务启动"><a href="#服务启动" class="headerlink" title="服务启动"></a>服务启动</h3><blockquote>
+<p>service turnserver start</p>
+</blockquote>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><ul>
+<li><a href="https://test.webrtc.org/" target="_blank" rel="external">https://test.webrtc.org/</a></li>
+</ul>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>1.<a href="http://www.jianshu.com/p/c55ecf5a3fcf" target="_blank" rel="external">自建 AppRTC</a><br>2.<a href="http://io.diveinedu.com/2015/02/05/%E7%AC%AC%E5%85%AD%E7%AB%A0-WebRTC%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA.html" target="_blank" rel="external">第六章 WebRTC服务器搭建</a><br>3.<a href="http://www.hankcs.com/program/network/actual-rfc5766-turn-server-and-ice4j-wide-area-network-communication.html" target="_blank" rel="external">实战rfc5766-turn-server和ice4j广域网通讯</a><br>4.<a href="https://webrtc.github.io/samples/" target="_blank" rel="external">WebRTC samples</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/blog/highcharts-2-demo/" itemprop="url">
                   Highcharts Demo
                 </a>
@@ -713,7 +921,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/blog/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -721,7 +929,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/blog/categories">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -730,7 +938,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/blog/tags">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
