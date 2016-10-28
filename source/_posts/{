@@ -1,0 +1,13 @@
+{
+  lifetimeDuration: '43200.000s',
+  iceServers: [
+    {
+      urls: ['turn:47.88.32.224:3478'],
+      username: 'linzq',
+      credential: 'linzq'
+    },
+    {
+      urls: ['stun:47.88.32.224:3478']
+    }
+  ]
+}

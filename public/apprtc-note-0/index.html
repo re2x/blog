@@ -68,7 +68,7 @@
 <link href="/blog/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="re2x,rex_lin,rex,林泽群,技术,开发,android,oc,js,web,html" />
+  <meta name="keywords" content="AppRTC,WebRTC,音视频,部署," />
 
 
 
@@ -86,12 +86,43 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="rex_log">
-<meta property="og:url" content="https://re2x.com/index.html">
+<meta name="description" content="AppRTC介绍AppRTC服务组件业务服务器 AppRTC
+参数：https://appr.tc/params.html
+
+信令服务器 ColliderTURN（ICE）服务器 CoturnAppRTC部署过程部署AppRTC 参考
+AppRTC是需要用到Google App Engine SDK for Python 和Grunt
+
+
+源码下载 
+
+git clone https://gith">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AppRTC服务器部署资料整理">
+<meta property="og:url" content="https://re2x.com/apprtc-note-0/index.html">
 <meta property="og:site_name" content="rex_log">
+<meta property="og:description" content="AppRTC介绍AppRTC服务组件业务服务器 AppRTC
+参数：https://appr.tc/params.html
+
+信令服务器 ColliderTURN（ICE）服务器 CoturnAppRTC部署过程部署AppRTC 参考
+AppRTC是需要用到Google App Engine SDK for Python 和Grunt
+
+
+源码下载 
+
+git clone https://gith">
+<meta property="og:updated_time" content="2016-09-21T02:21:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="rex_log">
+<meta name="twitter:title" content="AppRTC服务器部署资料整理">
+<meta name="twitter:description" content="AppRTC介绍AppRTC服务组件业务服务器 AppRTC
+参数：https://appr.tc/params.html
+
+信令服务器 ColliderTURN（ICE）服务器 CoturnAppRTC部署过程部署AppRTC 参考
+AppRTC是需要用到Google App Engine SDK for Python 和Grunt
+
+
+源码下载 
+
+git clone https://gith">
 
 
 
@@ -112,9 +143,9 @@
 
 
 
-  <link rel="canonical" href="https://re2x.com/"/>
+  <link rel="canonical" href="https://re2x.com/apprtc-note-0/"/>
 
-  <title> rex_log </title>
+  <title> AppRTC服务器部署资料整理 | rex_log </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -144,9 +175,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -253,9 +282,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -275,10 +304,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/blog/apprtc-note-0/" itemprop="url">
-                  AppRTC服务器部署资料整理
-                </a>
+                AppRTC服务器部署资料整理
               
             
           </h1>
@@ -356,9 +382,7 @@
       
 
       
-        
-          
-            <h1 id="AppRTC介绍"><a href="#AppRTC介绍" class="headerlink" title="AppRTC介绍"></a>AppRTC介绍</h1><h1 id="AppRTC服务组件"><a href="#AppRTC服务组件" class="headerlink" title="AppRTC服务组件"></a>AppRTC服务组件</h1><h2 id="业务服务器-AppRTC"><a href="#业务服务器-AppRTC" class="headerlink" title="业务服务器 AppRTC"></a>业务服务器 <a href="https://github.com/webrtc/apprtc" target="_blank" rel="external">AppRTC</a></h2><ul>
+        <h1 id="AppRTC介绍"><a href="#AppRTC介绍" class="headerlink" title="AppRTC介绍"></a>AppRTC介绍</h1><h1 id="AppRTC服务组件"><a href="#AppRTC服务组件" class="headerlink" title="AppRTC服务组件"></a>AppRTC服务组件</h1><h2 id="业务服务器-AppRTC"><a href="#业务服务器-AppRTC" class="headerlink" title="业务服务器 AppRTC"></a>业务服务器 <a href="https://github.com/webrtc/apprtc" target="_blank" rel="external">AppRTC</a></h2><ul>
 <li>参数：<a href="https://appr.tc/params.html" target="_blank" rel="external">https://appr.tc/params.html</a></li>
 </ul>
 <h2 id="信令服务器-Collider"><a href="#信令服务器-Collider" class="headerlink" title="信令服务器 Collider"></a>信令服务器 <a href="https://github.com/webrtc/apprtc/blob/master/src/collider/README.md" target="_blank" rel="external">Collider</a></h2><h2 id="TURN（ICE）服务器-Coturn"><a href="#TURN（ICE）服务器-Coturn" class="headerlink" title="TURN（ICE）服务器 Coturn"></a>TURN（ICE）服务器 <a href="https://github.com/coturn" target="_blank" rel="external">Coturn</a></h2><h1 id="AppRTC部署过程"><a href="#AppRTC部署过程" class="headerlink" title="AppRTC部署过程"></a>AppRTC部署过程</h1><h2 id="部署AppRTC-参考"><a href="#部署AppRTC-参考" class="headerlink" title="部署AppRTC 参考"></a>部署AppRTC <a href="https://github.com/webrtc/apprtc#deployment" target="_blank" rel="external">参考</a></h2><blockquote>
@@ -436,453 +460,65 @@
 </ul>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>1.<a href="http://www.jianshu.com/p/c55ecf5a3fcf" target="_blank" rel="external">自建 AppRTC</a><br>2.<a href="http://io.diveinedu.com/2015/02/05/%E7%AC%AC%E5%85%AD%E7%AB%A0-WebRTC%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA.html" target="_blank" rel="external">第六章 WebRTC服务器搭建</a><br>3.<a href="http://www.hankcs.com/program/network/actual-rfc5766-turn-server-and-ice4j-wide-area-network-communication.html" target="_blank" rel="external">实战rfc5766-turn-server和ice4j广域网通讯</a><br>4.<a href="https://webrtc.github.io/samples/" target="_blank" rel="external">WebRTC samples</a></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/blog/highcharts-2-demo/" itemprop="url">
-                  Highcharts Demo
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-29T14:40:34+08:00" content="2016-07-29">
-              2016-07-29
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/blog/categories/Demo/" itemprop="url" rel="index">
-                    <span itemprop="name">Demo</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
+            <a href="/blog/tags/AppRTC/" rel="tag">#AppRTC</a>
           
-
+            <a href="/blog/tags/WebRTC/" rel="tag">#WebRTC</a>
           
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/blog/highcharts-2-demo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="highcharts-2-demo/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
+            <a href="/blog/tags/音视频/" rel="tag">#音视频</a>
           
-
-          
-
-          
-          
-
+            <a href="/blog/tags/部署/" rel="tag">#部署</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>最近在项目中用到了highcharts来实现图表功能，做了几个demo给相关的同事</p>
-<ul>
-<li><a href="/demo/charts/charts_demo.html">最近7日数据</a></li>
-</ul>
-<iframe style="border:none;width:100%;height:250px;" src="/demo/charts/charts_demo.html"></iframe>
-
-<ul>
-<li><a href="/demo/bp-charts/bp-charts.html?show=14&amp;dl=1">血压数据</a></li>
-</ul>
-<iframe style="border:none;width:100%;height:250px;" src="/demo/bp-charts/bp-charts.html?show=14&amp;dl=1"></iframe>
-
-<ul>
-<li><a href="/demo/bp-charts/ss-charts.html?show=21&amp;type=%E8%A1%80%E6%B0%A7%E9%A5%B1%E5%92%8C%E5%BA%A6">血氧饱和度</a></li>
-</ul>
-<iframe style="border:none;width:100%;height:250px;" src="/demo/bp-charts/ss-charts.html?show=21&type=%E8%A1%80%E6%B0%A7%E9%A5%B1%E5%92%8C%E5%BA%A6"></iframe>
-
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/blog/highcharts-2-demo/" rel="next" title="Highcharts Demo">
+                <i class="fa fa-chevron-left"></i> Highcharts Demo
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/blog/思而不学则die/" itemprop="url">
-                  思而不学则die
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-20T12:04:11+08:00" content="2016-07-20">
-              2016-07-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/blog/categories/杂文/" itemprop="url" rel="index">
-                    <span itemprop="name">杂文</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/blog/思而不学则die/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="思而不学则die/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>王小波最推崇的一段台词，来自英若诚翻译的萧伯纳名剧《芭芭拉少校》</p>
-<blockquote>
-<p> 大军火商安德谢夫与儿子斯蒂文的对白。安德谢夫：“你到底知道什么？，关心什么？”斯蒂文：“我知道什么是对的，什么是错的。”安德谢夫：“不可思议！对工商业深恶痛绝，对法律一无所知，和文学艺术无缘，对哲学毫无野心，可是掌握了人世间最大的秘密，叫历代哲学家猜不透的，叫古今律师无法解释的，叫工商业大亨糊里糊涂的，叫艺术家走投无路的，你居然掌握了这个秘密，你知道什么是对的，什么是错的。天哪，你是天才，你是大师中的大师，你是神！才二十四岁！”</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/blog/hybrid-app-brief-talk/" itemprop="url">
-                  浅谈Hybrid App
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-18T11:44:06+08:00" content="2016-07-18">
-              2016-07-18
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/blog/categories/App/" itemprop="url" rel="index">
-                    <span itemprop="name">App</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/blog/hybrid-app-brief-talk/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="hybrid-app-brief-talk/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="浅谈Hybrid-App开发"><a href="#浅谈Hybrid-App开发" class="headerlink" title="浅谈Hybrid App开发"></a>浅谈Hybrid App开发</h1><blockquote>
-<p>我们常说的：在Android、iOS上的用H5来做界面</p>
-</blockquote>
-<p>我们把档次稍微提高一下：</p>
-<blockquote>
-<p>今天和大家分享的是<strong> Hybrid App 的开发</strong></p>
-</blockquote>
-<p><strong>Hybrid App开发</strong></p>
-<ul>
-<li>它不是手机网页开发、不是html、不是h5，但又都是</li>
-<li>做这个需要懂iOS、Android，还要懂html、js、css</li>
-<li>最麻烦的还是兼容性，主要的工作还是在web开发上</li>
-<li>已是主流了</li>
-</ul>
-<p><img src="/blog/post_images/hybrid-app-brief-talk-01.png" alt=""></p>
-<h1 id="为什么要谈Hybrid-App开发"><a href="#为什么要谈Hybrid-App开发" class="headerlink" title="为什么要谈Hybrid App开发"></a>为什么要谈Hybrid App开发</h1><ul>
-<li><h2 id="我们现在的App就是Hybrid-App"><a href="#我们现在的App就是Hybrid-App" class="headerlink" title="我们现在的App就是Hybrid App"></a>我们现在的App就是Hybrid App</h2><blockquote>
-<p>所以我们做得比较简单</p>
-</blockquote>
-</li>
-<li><h2 id="主流，基本上现在常用的App都是Hybrid-App"><a href="#主流，基本上现在常用的App都是Hybrid-App" class="headerlink" title="主流，基本上现在常用的App都是Hybrid App"></a>主流，基本上现在常用的App都是Hybrid App</h2><blockquote>
-<p>AppStore、Instagram、微信(公众号、钱包)、支付宝（城市服务、电影、）、美团、滴滴、京东、汽车之家、联通手机营业厅……</p>
-</blockquote>
-</li>
-<li><h2 id="快速迭代，在不更新APP的情况下，修改、新增功能"><a href="#快速迭代，在不更新APP的情况下，修改、新增功能" class="headerlink" title="快速迭代，在不更新APP的情况下，修改、新增功能"></a>快速迭代，在不更新APP的情况下，修改、新增功能</h2><blockquote>
-<p>例如：我们的新版首页，只要在服务器更新了，我的APP可以很快增加一个弱交互的模块；发现一些bug，也可以直接热修复</p>
-</blockquote>
-</li>
-<li><h2 id="开发统一，不管是Android、iOS，甚至是WP都可以统一开发，减少各个平台功能不统一的问题"><a href="#开发统一，不管是Android、iOS，甚至是WP都可以统一开发，减少各个平台功能不统一的问题" class="headerlink" title="开发统一，不管是Android、iOS，甚至是WP都可以统一开发，减少各个平台功能不统一的问题"></a>开发统一，不管是Android、iOS，甚至是WP都可以统一开发，减少各个平台功能不统一的问题</h2><blockquote>
-<p>1.原生开发专注于底层核心模块的开发、优化，封装好与web的交互接口。web实现功能模块后，所有端都无需重新开发</p>
-<p>2.例如：视频直播。原生开发专注与视频推流、视频播放、聊天功能的开发、优化，消息推送等，用web实现直播列表、直播创建等展示、数据编辑功能开发。相互之间定义好调用接口即可。</p>
-</blockquote>
-</li>
-<li><h2 id="总结我们现在混合开发发现的问题，优化我们的App"><a href="#总结我们现在混合开发发现的问题，优化我们的App" class="headerlink" title="总结我们现在混合开发发现的问题，优化我们的App"></a>总结我们现在混合开发发现的问题，优化我们的App</h2><blockquote>
-<p>我们可以做得更好</p>
-</blockquote>
-</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/blog/hybrid-app-brief-talk/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -890,6 +526,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="apprtc-note-0/"
+           data-title="AppRTC服务器部署资料整理" data-url="https://re2x.com/blog/apprtc-note-0/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -909,8 +553,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://secure.gravatar.com/avatar/2b5635fbaf87d41193667e593132c5c2?s=140"
@@ -987,6 +640,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AppRTC介绍"><span class="nav-number">1.</span> <span class="nav-text">AppRTC介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AppRTC服务组件"><span class="nav-number">2.</span> <span class="nav-text">AppRTC服务组件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#业务服务器-AppRTC"><span class="nav-number">2.1.</span> <span class="nav-text">业务服务器 AppRTC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#信令服务器-Collider"><span class="nav-number">2.2.</span> <span class="nav-text">信令服务器 Collider</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TURN（ICE）服务器-Coturn"><span class="nav-number">2.3.</span> <span class="nav-text">TURN（ICE）服务器 Coturn</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AppRTC部署过程"><span class="nav-number">3.</span> <span class="nav-text">AppRTC部署过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#部署AppRTC-参考"><span class="nav-number">3.1.</span> <span class="nav-text">部署AppRTC 参考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署Collider-参考"><span class="nav-number">3.2.</span> <span class="nav-text">部署Collider 参考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署Coturn"><span class="nav-number">3.3.</span> <span class="nav-text">部署Coturn</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#启动服务"><span class="nav-number">4.</span> <span class="nav-text">启动服务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#启动apprtc"><span class="nav-number">4.1.</span> <span class="nav-text">启动apprtc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动collider"><span class="nav-number">4.2.</span> <span class="nav-text">启动collider</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动coturn"><span class="nav-number">4.3.</span> <span class="nav-text">启动coturn</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令行参数启动"><span class="nav-number">4.3.1.</span> <span class="nav-text">命令行参数启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件启动"><span class="nav-number">4.3.2.</span> <span class="nav-text">配置文件启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务启动"><span class="nav-number">4.3.3.</span> <span class="nav-text">服务启动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">4.4.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -1085,6 +749,10 @@
   
 
   
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

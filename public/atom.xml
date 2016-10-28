@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://re2x.com/"/>
-  <updated>2016-08-01T01:59:08.000Z</updated>
+  <updated>2016-09-21T02:21:42.000Z</updated>
   <id>https://re2x.com/</id>
   
   <author>
@@ -16,32 +16,144 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Highcharts Demo 2例</title>
+    <title>AppRTC服务器部署资料整理</title>
+    <link href="https://re2x.com/apprtc-note-0/"/>
+    <id>https://re2x.com/apprtc-note-0/</id>
+    <published>2016-08-17T02:00:32.000Z</published>
+    <updated>2016-09-21T02:21:42.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;AppRTC介绍&quot;&gt;&lt;a href=&quot;#AppRTC介绍&quot; class=&quot;headerlink&quot; title=&quot;AppRTC介绍&quot;&gt;&lt;/a&gt;AppRTC介绍&lt;/h1&gt;&lt;h1 id=&quot;AppRTC服务组件&quot;&gt;&lt;a href=&quot;#AppRTC服务组件&quot; class=&quot;headerlink&quot; title=&quot;AppRTC服务组件&quot;&gt;&lt;/a&gt;AppRTC服务组件&lt;/h1&gt;&lt;h2 id=&quot;业务服务器-AppRTC&quot;&gt;&lt;a href=&quot;#业务服务器-AppRTC&quot; class=&quot;headerlink&quot; title=&quot;业务服务器 AppRTC&quot;&gt;&lt;/a&gt;业务服务器 &lt;a href=&quot;https://github.com/webrtc/apprtc&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AppRTC&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;参数：&lt;a href=&quot;https://appr.tc/params.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://appr.tc/params.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;信令服务器-Collider&quot;&gt;&lt;a href=&quot;#信令服务器-Collider&quot; class=&quot;headerlink&quot; title=&quot;信令服务器 Collider&quot;&gt;&lt;/a&gt;信令服务器 &lt;a href=&quot;https://github.com/webrtc/apprtc/blob/master/src/collider/README.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Collider&lt;/a&gt;&lt;/h2&gt;&lt;h2 id=&quot;TURN（ICE）服务器-Coturn&quot;&gt;&lt;a href=&quot;#TURN（ICE）服务器-Coturn&quot; class=&quot;headerlink&quot; title=&quot;TURN（ICE）服务器 Coturn&quot;&gt;&lt;/a&gt;TURN（ICE）服务器 &lt;a href=&quot;https://github.com/coturn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Coturn&lt;/a&gt;&lt;/h2&gt;&lt;h1 id=&quot;AppRTC部署过程&quot;&gt;&lt;a href=&quot;#AppRTC部署过程&quot; class=&quot;headerlink&quot; title=&quot;AppRTC部署过程&quot;&gt;&lt;/a&gt;AppRTC部署过程&lt;/h1&gt;&lt;h2 id=&quot;部署AppRTC-参考&quot;&gt;&lt;a href=&quot;#部署AppRTC-参考&quot; class=&quot;headerlink&quot; title=&quot;部署AppRTC 参考&quot;&gt;&lt;/a&gt;部署AppRTC &lt;a href=&quot;https://github.com/webrtc/apprtc#deployment&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;AppRTC是需要用到&lt;a href=&quot;https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Google App Engine SDK for Python &lt;/a&gt;和&lt;a href=&quot;http://gruntjs.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Grunt&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;源码下载 &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;git clone &lt;a href=&quot;https://github.com/webrtc/apprtc.git&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/webrtc/apprtc.git&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;部署Collider-参考&quot;&gt;&lt;a href=&quot;#部署Collider-参考&quot; class=&quot;headerlink&quot; title=&quot;部署Collider 参考&quot;&gt;&lt;/a&gt;部署Collider &lt;a href=&quot;https://github.com/webrtc/apprtc/blob/master/src/collider/README.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考&lt;/a&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Collider是GO开发的，所以需要安装Go环境，安装参考 &lt;a href=&quot;http://golang.org/doc/install&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://golang.org/doc/install&lt;/a&gt; and &lt;a href=&quot;http://golang.org/doc/code.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://golang.org/doc/code.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;源码位于apprtc/src/collider/collider&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;确定你已经设置&lt;code&gt;GOPATH&lt;/code&gt;环境变量，例如：&lt;code&gt;export GOPATH=$HOME/goWorkspace&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;复制一份源码到$GOPATH/src&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;cp -r apprtc/src/collider $GOPATH/src&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装依赖性 &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;go get collidermain&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装 collidermain &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;go install collidermain&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;启动 collidermain &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$GOPATH/bin/collidermain -port=8089 -tls=false -room-server=&lt;a href=&quot;http://47.88.32.224:8080&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://47.88.32.224:8080&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;部署Coturn&quot;&gt;&lt;a href=&quot;#部署Coturn&quot; class=&quot;headerlink&quot; title=&quot;部署Coturn&quot;&gt;&lt;/a&gt;部署Coturn&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;源码下载 &lt;code&gt;http://turnserver.open-sys.org/downloads/v4.5.0.3/&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;生成加密用的密钥 &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;sudo openssl req -x509 -newkey rsa:2048 -keyout /usr/local/etc/turn_server_pkey.pem -out /usr/local/etc/turn_server_cert.pem -days 99999 -nodes&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;启动服务&quot;&gt;&lt;a href=&quot;#启动服务&quot; class=&quot;headerlink&quot; title=&quot;启动服务&quot;&gt;&lt;/a&gt;启动服务&lt;/h1&gt;&lt;h2 id=&quot;启动apprtc&quot;&gt;&lt;a href=&quot;#启动apprtc&quot; class=&quot;headerlink&quot; title=&quot;启动apprtc&quot;&gt;&lt;/a&gt;启动apprtc&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;cd到apprtc目录，执行：&lt;blockquote&gt;
+&lt;p&gt;dev_appserver.py –host 0.0.0.0 ./out/app_engine&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;启动collider&quot;&gt;&lt;a href=&quot;#启动collider&quot; class=&quot;headerlink&quot; title=&quot;启动collider&quot;&gt;&lt;/a&gt;启动collider&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;cd到$GOPATH/bin目录，执行：&lt;blockquote&gt;
+&lt;p&gt;$GOPATH/bin/collidermain -port=8089 -tls=false -room-server=”&lt;a href=&quot;http://47.88.32.224:8080&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://47.88.32.224:8080&lt;/a&gt;“&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;启动coturn&quot;&gt;&lt;a href=&quot;#启动coturn&quot; class=&quot;headerlink&quot; title=&quot;启动coturn&quot;&gt;&lt;/a&gt;启动coturn&lt;/h2&gt;&lt;h3 id=&quot;命令行参数启动&quot;&gt;&lt;a href=&quot;#命令行参数启动&quot; class=&quot;headerlink&quot; title=&quot;命令行参数启动&quot;&gt;&lt;/a&gt;命令行参数启动&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;turnserver -a -v -n –no-dtls –no-tls -u linzq:linzq -r “apprtc”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;配置文件启动&quot;&gt;&lt;a href=&quot;#配置文件启动&quot; class=&quot;headerlink&quot; title=&quot;配置文件启动&quot;&gt;&lt;/a&gt;配置文件启动&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;turnserver -c /etc/turnserver/turnserver.conf&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;服务启动&quot;&gt;&lt;a href=&quot;#服务启动&quot; class=&quot;headerlink&quot; title=&quot;服务启动&quot;&gt;&lt;/a&gt;服务启动&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;service turnserver start&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;测试&quot;&gt;&lt;a href=&quot;#测试&quot; class=&quot;headerlink&quot; title=&quot;测试&quot;&gt;&lt;/a&gt;测试&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://test.webrtc.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://test.webrtc.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h1&gt;&lt;p&gt;1.&lt;a href=&quot;http://www.jianshu.com/p/c55ecf5a3fcf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;自建 AppRTC&lt;/a&gt;&lt;br&gt;2.&lt;a href=&quot;http://io.diveinedu.com/2015/02/05/%E7%AC%AC%E5%85%AD%E7%AB%A0-WebRTC%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第六章 WebRTC服务器搭建&lt;/a&gt;&lt;br&gt;3.&lt;a href=&quot;http://www.hankcs.com/program/network/actual-rfc5766-turn-server-and-ice4j-wide-area-network-communication.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;实战rfc5766-turn-server和ice4j广域网通讯&lt;/a&gt;&lt;br&gt;4.&lt;a href=&quot;https://webrtc.github.io/samples/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WebRTC samples&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;AppRTC介绍&quot;&gt;&lt;a href=&quot;#AppRTC介绍&quot; class=&quot;headerlink&quot; title=&quot;AppRTC介绍&quot;&gt;&lt;/a&gt;AppRTC介绍&lt;/h1&gt;&lt;h1 id=&quot;AppRTC服务组件&quot;&gt;&lt;a href=&quot;#AppRTC服务组件&quot; class=&quot;
+    
+    </summary>
+    
+      <category term="WebRTC" scheme="https://re2x.com/categories/WebRTC/"/>
+    
+      <category term="AppRTC" scheme="https://re2x.com/categories/WebRTC/AppRTC/"/>
+    
+    
+      <category term="AppRTC" scheme="https://re2x.com/tags/AppRTC/"/>
+    
+      <category term="WebRTC" scheme="https://re2x.com/tags/WebRTC/"/>
+    
+      <category term="音视频" scheme="https://re2x.com/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/"/>
+    
+      <category term="部署" scheme="https://re2x.com/tags/%E9%83%A8%E7%BD%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Highcharts Demo</title>
     <link href="https://re2x.com/highcharts-2-demo/"/>
     <id>https://re2x.com/highcharts-2-demo/</id>
     <published>2016-07-29T06:40:34.000Z</published>
-    <updated>2016-08-01T01:59:08.000Z</updated>
+    <updated>2016-10-28T06:59:04.000Z</updated>
     
-    <content type="html">&lt;p&gt;最近在项目中用到了highcharts来实现图表功能，做了2个demo给相关的同事&lt;/p&gt;
+    <content type="html">&lt;p&gt;最近在项目中用到了highcharts来实现图表功能，做了几个demo给相关的同事&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://re2x.com/demo/charts/charts_demo.html&quot;&gt;最近7日数据&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/demo/charts/charts_demo.html&quot;&gt;最近7日数据&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;https://re2x.com/demo/charts/charts_demo.html&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;/demo/charts/charts_demo.html&quot;&gt;&lt;/iframe&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://re2x.com/demo/bp-charts/charts-demo.html?show=14&amp;amp;dl=1&quot;&gt;血压数据&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/demo/bp-charts/bp-charts.html?show=14&amp;amp;dl=1&quot;&gt;血压数据&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;https://re2x.com/demo/bp-charts/charts-demo.html?show=14&amp;amp;dl=1&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;/demo/bp-charts/bp-charts.html?show=14&amp;amp;dl=1&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/demo/bp-charts/ss-charts.html?show=21&amp;amp;type=%E8%A1%80%E6%B0%A7%E9%A5%B1%E5%92%8C%E5%BA%A6&quot;&gt;血氧饱和度&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;/demo/bp-charts/ss-charts.html?show=21&amp;type=%E8%A1%80%E6%B0%A7%E9%A5%B1%E5%92%8C%E5%BA%A6&quot;&gt;&lt;/iframe&gt;
 
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;最近在项目中用到了highcharts来实现图表功能，做了2个demo给相关的同事&lt;/p&gt;
+      &lt;p&gt;最近在项目中用到了highcharts来实现图表功能，做了几个demo给相关的同事&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://re2x.com/demo/charts/charts_demo.html&quot;&gt;最近7日数据&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/demo/charts/charts_demo.html&quot;&gt;最近7日数据&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;ifr
+&lt;iframe style=&quot;borde
     
     </summary>
     
