@@ -127,23 +127,23 @@
     <link href="https://re2x.com/highcharts-2-demo/"/>
     <id>https://re2x.com/highcharts-2-demo/</id>
     <published>2016-07-29T06:40:34.000Z</published>
-    <updated>2016-08-04T05:54:12.000Z</updated>
+    <updated>2016-10-28T06:59:04.000Z</updated>
     
     <content type="html">&lt;p&gt;最近在项目中用到了highcharts来实现图表功能，做了几个demo给相关的同事&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://re2x.com/demo/charts/charts_demo.html&quot;&gt;最近7日数据&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/demo/charts/charts_demo.html&quot;&gt;最近7日数据&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;https://re2x.com/demo/charts/charts_demo.html&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;/demo/charts/charts_demo.html&quot;&gt;&lt;/iframe&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://re2x.com/demo/bp-charts/bp-charts.html?show=14&amp;amp;dl=1&quot;&gt;血压数据&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/demo/bp-charts/bp-charts.html?show=14&amp;amp;dl=1&quot;&gt;血压数据&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;https://re2x.com/demo/bp-charts/bp-charts.html?show=14&amp;amp;dl=1&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;/demo/bp-charts/bp-charts.html?show=14&amp;amp;dl=1&quot;&gt;&lt;/iframe&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://re2x.com/demo/bp-charts/ss-charts.html?show=21&amp;amp;type=%E8%A1%80%E6%B0%A7%E9%A5%B1%E5%92%8C%E5%BA%A6&quot;&gt;血氧饱和度&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/demo/bp-charts/ss-charts.html?show=21&amp;amp;type=%E8%A1%80%E6%B0%A7%E9%A5%B1%E5%92%8C%E5%BA%A6&quot;&gt;血氧饱和度&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;https://re2x.com/demo/bp-charts/ss-charts.html?show=21&amp;type=%E8%A1%80%E6%B0%A7%E9%A5%B1%E5%92%8C%E5%BA%A6&quot;&gt;&lt;/iframe&gt;
+&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;/demo/bp-charts/ss-charts.html?show=21&amp;type=%E8%A1%80%E6%B0%A7%E9%A5%B1%E5%92%8C%E5%BA%A6&quot;&gt;&lt;/iframe&gt;
 
 </content>
     
@@ -151,9 +151,9 @@
     
       &lt;p&gt;最近在项目中用到了highcharts来实现图表功能，做了几个demo给相关的同事&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://re2x.com/demo/charts/charts_demo.html&quot;&gt;最近7日数据&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/demo/charts/charts_demo.html&quot;&gt;最近7日数据&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;ifr
+&lt;iframe style=&quot;borde
     
     </summary>
     
