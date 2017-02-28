@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://re2x.com/"/>
-  <updated>2016-09-21T02:21:42.000Z</updated>
+  <updated>2017-02-28T01:57:36.000Z</updated>
   <id>https://re2x.com/</id>
   
   <author>
@@ -14,6 +14,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WebRTC 编译笔记</title>
+    <link href="https://re2x.com/webrtc-build-cmd/"/>
+    <id>https://re2x.com/webrtc-build-cmd/</id>
+    <published>2017-02-28T01:52:01.000Z</published>
+    <updated>2017-02-28T01:57:36.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;iOS产生xcode项目&quot;&gt;&lt;a href=&quot;#iOS产生xcode项目&quot; class=&quot;headerlink&quot; title=&quot;iOS产生xcode项目&quot;&gt;&lt;/a&gt;iOS产生xcode项目&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/ios64 -args=&amp;quot;target_os=ios target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARGETS,其中AppRTCMobile是apprtc的ios版本&lt;/p&gt;
+&lt;h1 id=&quot;iOS-FAT库打包（57后面的版本才可用）&quot;&gt;&lt;a href=&quot;#iOS-FAT库打包（57后面的版本才可用）&quot; class=&quot;headerlink&quot; title=&quot;iOS FAT库打包（57后面的版本才可用）&quot;&gt;&lt;/a&gt;iOS FAT库打包（57后面的版本才可用）&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;./tools-webrtc/ios/build_ios_libs.sh --extra-gn-args=&amp;apos;proprietary_codecs=true&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;默认生成根目录下 out_ios_libs/WebRTC.framework 文件&lt;/p&gt;
+&lt;h1 id=&quot;windows产生vs2015编译配置&quot;&gt;&lt;a href=&quot;#windows产生vs2015编译配置&quot; class=&quot;headerlink&quot; title=&quot;windows产生vs2015编译配置&quot;&gt;&lt;/a&gt;windows产生vs2015编译配置&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/win_x64 -args=&amp;quot;target_cpu=\&amp;quot;x64\&amp;quot; proprietary_codecs=true&amp;quot; --ide=vs&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/win_x86 -args=&amp;quot;target_cpu=\&amp;quot;x86\&amp;quot; proprietary_codecs=true&amp;quot; --ide=vs&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;vs项目文件位置 out/win_x64/all.sln&lt;/p&gt;
+&lt;h1 id=&quot;Android产生编译配置&quot;&gt;&lt;a href=&quot;#Android产生编译配置&quot; class=&quot;headerlink&quot; title=&quot;Android产生编译配置&quot;&gt;&lt;/a&gt;Android产生编译配置&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/android_arm -args=&amp;quot;target_os=android target_cpu=\&amp;quot;arm\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;Android-aar打包（57后面的版本才可用）&quot;&gt;&lt;a href=&quot;#Android-aar打包（57后面的版本才可用）&quot; class=&quot;headerlink&quot; title=&quot;Android aar打包（57后面的版本才可用）&quot;&gt;&lt;/a&gt;Android aar打包（57后面的版本才可用）&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;./tools-webrtc/android/build_aar.py --verbose --extra-gn-args=&amp;apos;proprietary_codecs=true use_openh264=true&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;默认生成根目录下 libwebrtc.aar 文件&lt;/p&gt;
+&lt;h1 id=&quot;Android产生Android-Studio编译配置&quot;&gt;&lt;a href=&quot;#Android产生Android-Studio编译配置&quot; class=&quot;headerlink&quot; title=&quot;Android产生Android Studio编译配置&quot;&gt;&lt;/a&gt;Android产生Android Studio编译配置&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;2017-02-23&lt;/code&gt; 更新&lt;/strong&gt;&lt;br&gt;最新的WebRTC项目已经支持生成AS项目，链接 &lt;a href=&quot;https://groups.google.com/forum/#!topic/discuss-webrtc/b7yQjvPLHaM&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PSA: AppRTCMobile can now be developed in Android Studio&lt;/a&gt;  ，具体做法如下：&lt;/p&gt;
+&lt;p&gt;执行如下命令：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;build/android/gradle/generate_gradle.py --output-directory $PWD/out/Debug --target &amp;quot;//webrtc/examples:AppRTCMobile&amp;quot; --use-gradle-process-resources&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;生成的项目目录&lt;code&gt;out/Debug/gradle&lt;/code&gt;，需要Android Studio 2.2及以上版本&lt;/p&gt;
+&lt;p&gt;具体编译方法查看 &lt;a href=&quot;https://chromium.googlesource.com/chromium/src.git/+/master/docs/android_studio.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;android_studio.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如下内容已被废弃↓&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;由于WebRTC本身没有可以产生AS项目的脚本，我们需要自己手动生成&lt;br&gt;1.先执行 &lt;code&gt;Android aar打包&lt;/code&gt; 命令，产生 &lt;code&gt;libwebrtc.aar&lt;/code&gt;&lt;br&gt;2.新建一个 &lt;code&gt;Android Studio Project&lt;/code&gt;&lt;br&gt;3.在新建的 &lt;code&gt;Projec&lt;/code&gt;  新建一个 &lt;code&gt;Module&lt;/code&gt; ，选择 &lt;code&gt;Import .JAR/.AAR Package&lt;/code&gt; ，选择 &lt;code&gt;步骤1&lt;/code&gt; 生成的 &lt;code&gt;libwebrtc.aar&lt;/code&gt; ，Subproject Name设为&lt;code&gt;libwebrtc&lt;/code&gt;&lt;br&gt;4.在 &lt;code&gt;app&lt;/code&gt; Module的 &lt;code&gt;build.gradle&lt;/code&gt; 的 &lt;code&gt;dependencies&lt;/code&gt; 节点增加 &lt;code&gt;compile project(&amp;quot;:libwebrtc&amp;quot;)&lt;/code&gt;&lt;br&gt;5.把 &lt;code&gt;webrtc/examples/androidapp&lt;/code&gt; 目录下的 &lt;code&gt;res&lt;/code&gt; 、 &lt;code&gt;src&lt;/code&gt; 文件夹及 &lt;code&gt;AndroidMainifest&lt;/code&gt; 文件复制到 &lt;code&gt;app&lt;/code&gt; Module，还有 &lt;code&gt;webrtc/examples/androidapp/third_party/autobanh/lib/autobanh.jar&lt;/code&gt; 复制到 &lt;code&gt;app&lt;/code&gt; Module的 &lt;code&gt;libs&lt;/code&gt; 目录&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;编译&quot;&gt;&lt;a href=&quot;#编译&quot; class=&quot;headerlink&quot; title=&quot;编译&quot;&gt;&lt;/a&gt;编译&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;ninja -C out/x86&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;查看编译配置参数&quot;&gt;&lt;a href=&quot;#查看编译配置参数&quot; class=&quot;headerlink&quot; title=&quot;查看编译配置参数&quot;&gt;&lt;/a&gt;查看编译配置参数&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn args out/winx64 --list&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;获取特定版本&quot;&gt;&lt;a href=&quot;#获取特定版本&quot; class=&quot;headerlink&quot; title=&quot;获取特定版本&quot;&gt;&lt;/a&gt;获取特定版本&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;获取正式的版本：使用 &lt;code&gt;gclient sync&lt;/code&gt; 下载完全部代码后，在代码目录下用 &lt;code&gt;git branch -a&lt;/code&gt; 查看所有版本，并用&lt;code&gt;git checkout remotes/branch-heads/57&lt;/code&gt; 获取57这个版本。&lt;/li&gt;
+&lt;li&gt;获取某次commit的版本：使用 &lt;code&gt;gclient sync -r src@037ee92455a6e7fc01efb4397a6cdcf8e49389b4&lt;/code&gt; 获取037ee92455a6e7fc01efb4397a6cdcf8e49389b4这个commit id的版本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://webrtc.org/native-code/development/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WebRTC Development&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@atsakiridis/building-a-fat-webrtc-framework-on-ios-8610fffb2224#.v7zqct8v9&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Building a Fat WebRTC framework on iOS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Checking out and Building Chromium for Windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromium.googlesource.com/chromium/src/+/master/DEPS#234&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;查看chromium项目用的WebRTC版本&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;iOS产生xcode项目&quot;&gt;&lt;a href=&quot;#iOS产生xcode项目&quot; class=&quot;headerlink&quot; title=&quot;iOS产生xcode项目&quot;&gt;&lt;/a&gt;iOS产生xcode项目&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/ios64 -args=&amp;quot;target_os=ios target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARGETS,其中AppRTCMobile是apprtc的ios版本&lt;/p&gt;
+&lt;h1 id=&quot;iOS-FAT库打包（57后面的版本才可用）&quot;&gt;&lt;a href=&quot;#iOS-FAT库打包（57后面的版本才可用）&quot; class=&quot;headerlink&quot; title=&quot;iOS FAT库打包（57后面的版本才可用）&quot;&gt;&lt;/a&gt;iOS FAT库打包（57后面的版本才可用）&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;./tools-webrtc/ios/build_ios_libs.sh --extra-gn-args=&amp;apos;proprietary_codecs=true&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;默认生成根目录下 out_ios_libs/WebRTC.framework 文件&lt;/p&gt;
+&lt;h1 id=&quot;windows产生vs2015编译配置&quot;&gt;&lt;a href=&quot;#windows产生vs2015编译配置&quot; class=&quot;headerlink&quot; title=&quot;windows产生vs2015编译配置&quot;&gt;&lt;/a&gt;windows产生vs2015编译配置&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/win_x64 -args=&amp;quot;target_cpu=\&amp;quot;x64\&amp;quot; proprietary_codecs=true&amp;quot; --ide=vs&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/win_x86 -args=&amp;quot;target_cpu=\&amp;quot;x86\&amp;quot; proprietary_codecs=true&amp;quot; --ide=vs&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;vs项目文件位置 out/win_x64/all.sln&lt;/p&gt;
+&lt;h1 id=&quot;Android产生编译配置&quot;&gt;&lt;a href=&quot;#Android产生编译配置&quot; class=&quot;headerlink&quot; title=&quot;Android产生编译配置&quot;&gt;&lt;/a&gt;Android产生编译配置&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/android_arm -args=&amp;quot;target_os=android target_cpu=\&amp;quot;arm\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="WebRTC" scheme="https://re2x.com/categories/WebRTC/"/>
+    
+    
+      <category term="WebRTC" scheme="https://re2x.com/tags/WebRTC/"/>
+    
+      <category term="Android" scheme="https://re2x.com/tags/Android/"/>
+    
+      <category term="混合iOS" scheme="https://re2x.com/tags/%E6%B7%B7%E5%90%88iOS/"/>
+    
+      <category term="编译" scheme="https://re2x.com/tags/%E7%BC%96%E8%AF%91/"/>
+    
+  </entry>
   
   <entry>
     <title>AppRTC服务器部署资料整理</title>
@@ -128,6 +192,52 @@
     <id>https://re2x.com/highcharts-2-demo/</id>
     <published>2016-07-29T06:40:34.000Z</published>
     <updated>2016-10-28T06:59:04.000Z</updated>
+    
+    <content type="html">&lt;p&gt;最近在项目中用到了highcharts来实现图表功能，做了几个demo给相关的同事&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/demo/charts/charts_demo.html&quot;&gt;最近7日数据&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;/demo/charts/charts_demo.html&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/demo/bp-charts/bp-charts.html?show=14&amp;amp;dl=1&quot;&gt;血压数据&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;/demo/bp-charts/bp-charts.html?show=14&amp;amp;dl=1&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/demo/bp-charts/ss-charts.html?show=21&amp;amp;type=%E8%A1%80%E6%B0%A7%E9%A5%B1%E5%92%8C%E5%BA%A6&quot;&gt;血氧饱和度&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;/demo/bp-charts/ss-charts.html?show=21&amp;type=%E8%A1%80%E6%B0%A7%E9%A5%B1%E5%92%8C%E5%BA%A6&quot;&gt;&lt;/iframe&gt;
+
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在项目中用到了highcharts来实现图表功能，做了几个demo给相关的同事&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/demo/charts/charts_demo.html&quot;&gt;最近7日数据&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe style=&quot;borde
+    
+    </summary>
+    
+      <category term="Demo" scheme="https://re2x.com/categories/Demo/"/>
+    
+    
+      <category term="Highcharts" scheme="https://re2x.com/tags/Highcharts/"/>
+    
+      <category term="Demo" scheme="https://re2x.com/tags/Demo/"/>
+    
+      <category term="图表" scheme="https://re2x.com/tags/%E5%9B%BE%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Highcharts Demo</title>
+    <link href="https://re2x.com/%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BEdemo/"/>
+    <id>https://re2x.com/高德地图demo/</id>
+    <published>2016-07-29T06:40:34.000Z</published>
+    <updated>2016-10-28T07:03:06.000Z</updated>
     
     <content type="html">&lt;p&gt;最近在项目中用到了highcharts来实现图表功能，做了几个demo给相关的同事&lt;/p&gt;
 &lt;ul&gt;

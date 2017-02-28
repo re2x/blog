@@ -68,7 +68,7 @@
 <link href="/blog/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="AppRTC,WebRTC,音视频,部署," />
+  <meta name="keywords" content="WebRTC,Android,混合iOS,编译," />
 
 
 
@@ -86,43 +86,19 @@
 
 
 
-<meta name="description" content="AppRTC介绍AppRTC服务组件业务服务器 AppRTC
-参数：https://appr.tc/params.html
-
-信令服务器 ColliderTURN（ICE）服务器 CoturnAppRTC部署过程部署AppRTC 参考
-AppRTC是需要用到Google App Engine SDK for Python 和Grunt
-
-
-源码下载 
-
-git clone https://gith">
+<meta name="description" content="iOS产生xcode项目1gn gen out/ios64 -args=&amp;quot;target_os=ios target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode
+xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARG">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AppRTC服务器部署资料整理">
-<meta property="og:url" content="https://re2x.com/apprtc-note-0/index.html">
+<meta property="og:title" content="WebRTC 编译笔记">
+<meta property="og:url" content="https://re2x.com/webrtc-build-cmd/index.html">
 <meta property="og:site_name" content="rex_log">
-<meta property="og:description" content="AppRTC介绍AppRTC服务组件业务服务器 AppRTC
-参数：https://appr.tc/params.html
-
-信令服务器 ColliderTURN（ICE）服务器 CoturnAppRTC部署过程部署AppRTC 参考
-AppRTC是需要用到Google App Engine SDK for Python 和Grunt
-
-
-源码下载 
-
-git clone https://gith">
-<meta property="og:updated_time" content="2016-09-21T02:21:42.000Z">
+<meta property="og:description" content="iOS产生xcode项目1gn gen out/ios64 -args=&amp;quot;target_os=ios target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode
+xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARG">
+<meta property="og:updated_time" content="2017-02-28T01:57:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AppRTC服务器部署资料整理">
-<meta name="twitter:description" content="AppRTC介绍AppRTC服务组件业务服务器 AppRTC
-参数：https://appr.tc/params.html
-
-信令服务器 ColliderTURN（ICE）服务器 CoturnAppRTC部署过程部署AppRTC 参考
-AppRTC是需要用到Google App Engine SDK for Python 和Grunt
-
-
-源码下载 
-
-git clone https://gith">
+<meta name="twitter:title" content="WebRTC 编译笔记">
+<meta name="twitter:description" content="iOS产生xcode项目1gn gen out/ios64 -args=&amp;quot;target_os=ios target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode
+xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARG">
 
 
 
@@ -143,9 +119,9 @@ git clone https://gith">
 
 
 
-  <link rel="canonical" href="https://re2x.com/apprtc-note-0/"/>
+  <link rel="canonical" href="https://re2x.com/webrtc-build-cmd/"/>
 
-  <title> AppRTC服务器部署资料整理 | rex_log </title>
+  <title> WebRTC 编译笔记 | rex_log </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -304,7 +280,7 @@ git clone https://gith">
             
             
               
-                AppRTC服务器部署资料整理
+                WebRTC 编译笔记
               
             
           </h1>
@@ -316,8 +292,8 @@ git clone https://gith">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-17T10:00:32+08:00" content="2016-08-17">
-              2016-08-17
+            <time itemprop="dateCreated" datetime="2017-02-28T09:52:01+08:00" content="2017-02-28">
+              2017-02-28
             </time>
           </span>
 
@@ -337,18 +313,6 @@ git clone https://gith">
 
                 
                 
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/blog/categories/WebRTC/AppRTC/" itemprop="url" rel="index">
-                    <span itemprop="name">AppRTC</span>
-                  </a>
-                </span>
-
-                
-                
 
               
             </span>
@@ -358,8 +322,8 @@ git clone https://gith">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/blog/apprtc-note-0/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="apprtc-note-0/" itemprop="commentsCount"></span>
+                <a href="/blog/webrtc-build-cmd/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="webrtc-build-cmd/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -382,83 +346,36 @@ git clone https://gith">
       
 
       
-        <h1 id="AppRTC介绍"><a href="#AppRTC介绍" class="headerlink" title="AppRTC介绍"></a>AppRTC介绍</h1><h1 id="AppRTC服务组件"><a href="#AppRTC服务组件" class="headerlink" title="AppRTC服务组件"></a>AppRTC服务组件</h1><h2 id="业务服务器-AppRTC"><a href="#业务服务器-AppRTC" class="headerlink" title="业务服务器 AppRTC"></a>业务服务器 <a href="https://github.com/webrtc/apprtc" target="_blank" rel="external">AppRTC</a></h2><ul>
-<li>参数：<a href="https://appr.tc/params.html" target="_blank" rel="external">https://appr.tc/params.html</a></li>
+        <h1 id="iOS产生xcode项目"><a href="#iOS产生xcode项目" class="headerlink" title="iOS产生xcode项目"></a>iOS产生xcode项目</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gn gen out/ios64 -args=&quot;target_os=ios target_cpu=\&quot;x64\&quot; is_componnent_build=false proprietary_codecs=true&quot; --ide=xcode</div></pre></td></tr></table></figure>
+<p>xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARGETS,其中AppRTCMobile是apprtc的ios版本</p>
+<h1 id="iOS-FAT库打包（57后面的版本才可用）"><a href="#iOS-FAT库打包（57后面的版本才可用）" class="headerlink" title="iOS FAT库打包（57后面的版本才可用）"></a>iOS FAT库打包（57后面的版本才可用）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./tools-webrtc/ios/build_ios_libs.sh --extra-gn-args=&apos;proprietary_codecs=true&apos;</div></pre></td></tr></table></figure>
+<p>默认生成根目录下 out_ios_libs/WebRTC.framework 文件</p>
+<h1 id="windows产生vs2015编译配置"><a href="#windows产生vs2015编译配置" class="headerlink" title="windows产生vs2015编译配置"></a>windows产生vs2015编译配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gn gen out/win_x64 -args=&quot;target_cpu=\&quot;x64\&quot; proprietary_codecs=true&quot; --ide=vs</div><div class="line">gn gen out/win_x86 -args=&quot;target_cpu=\&quot;x86\&quot; proprietary_codecs=true&quot; --ide=vs</div></pre></td></tr></table></figure>
+<p>vs项目文件位置 out/win_x64/all.sln</p>
+<h1 id="Android产生编译配置"><a href="#Android产生编译配置" class="headerlink" title="Android产生编译配置"></a>Android产生编译配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gn gen out/android_arm -args=&quot;target_os=android target_cpu=\&quot;arm\&quot; is_componnent_build=false proprietary_codecs=true&quot;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="Android-aar打包（57后面的版本才可用）"><a href="#Android-aar打包（57后面的版本才可用）" class="headerlink" title="Android aar打包（57后面的版本才可用）"></a>Android aar打包（57后面的版本才可用）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./tools-webrtc/android/build_aar.py --verbose --extra-gn-args=&apos;proprietary_codecs=true use_openh264=true&apos;</div></pre></td></tr></table></figure>
+<p>默认生成根目录下 libwebrtc.aar 文件</p>
+<h1 id="Android产生Android-Studio编译配置"><a href="#Android产生Android-Studio编译配置" class="headerlink" title="Android产生Android Studio编译配置"></a>Android产生Android Studio编译配置</h1><p><strong><code>2017-02-23</code> 更新</strong><br>最新的WebRTC项目已经支持生成AS项目，链接 <a href="https://groups.google.com/forum/#!topic/discuss-webrtc/b7yQjvPLHaM" target="_blank" rel="external">PSA: AppRTCMobile can now be developed in Android Studio</a>  ，具体做法如下：</p>
+<p>执行如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">build/android/gradle/generate_gradle.py --output-directory $PWD/out/Debug --target &quot;//webrtc/examples:AppRTCMobile&quot; --use-gradle-process-resources</div></pre></td></tr></table></figure></p>
+<p>生成的项目目录<code>out/Debug/gradle</code>，需要Android Studio 2.2及以上版本</p>
+<p>具体编译方法查看 <a href="https://chromium.googlesource.com/chromium/src.git/+/master/docs/android_studio.md" target="_blank" rel="external">android_studio.md</a></p>
+<p><strong>如下内容已被废弃↓</strong></p>
+<hr>
+<p>由于WebRTC本身没有可以产生AS项目的脚本，我们需要自己手动生成<br>1.先执行 <code>Android aar打包</code> 命令，产生 <code>libwebrtc.aar</code><br>2.新建一个 <code>Android Studio Project</code><br>3.在新建的 <code>Projec</code>  新建一个 <code>Module</code> ，选择 <code>Import .JAR/.AAR Package</code> ，选择 <code>步骤1</code> 生成的 <code>libwebrtc.aar</code> ，Subproject Name设为<code>libwebrtc</code><br>4.在 <code>app</code> Module的 <code>build.gradle</code> 的 <code>dependencies</code> 节点增加 <code>compile project(&quot;:libwebrtc&quot;)</code><br>5.把 <code>webrtc/examples/androidapp</code> 目录下的 <code>res</code> 、 <code>src</code> 文件夹及 <code>AndroidMainifest</code> 文件复制到 <code>app</code> Module，还有 <code>webrtc/examples/androidapp/third_party/autobanh/lib/autobanh.jar</code> 复制到 <code>app</code> Module的 <code>libs</code> 目录</p>
+<hr>
+<h1 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ninja -C out/x86</div></pre></td></tr></table></figure>
+<h1 id="查看编译配置参数"><a href="#查看编译配置参数" class="headerlink" title="查看编译配置参数"></a>查看编译配置参数</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gn args out/winx64 --list</div></pre></td></tr></table></figure>
+<h1 id="获取特定版本"><a href="#获取特定版本" class="headerlink" title="获取特定版本"></a>获取特定版本</h1><ul>
+<li>获取正式的版本：使用 <code>gclient sync</code> 下载完全部代码后，在代码目录下用 <code>git branch -a</code> 查看所有版本，并用<code>git checkout remotes/branch-heads/57</code> 获取57这个版本。</li>
+<li>获取某次commit的版本：使用 <code>gclient sync -r src@037ee92455a6e7fc01efb4397a6cdcf8e49389b4</code> 获取037ee92455a6e7fc01efb4397a6cdcf8e49389b4这个commit id的版本。</li>
 </ul>
-<h2 id="信令服务器-Collider"><a href="#信令服务器-Collider" class="headerlink" title="信令服务器 Collider"></a>信令服务器 <a href="https://github.com/webrtc/apprtc/blob/master/src/collider/README.md" target="_blank" rel="external">Collider</a></h2><h2 id="TURN（ICE）服务器-Coturn"><a href="#TURN（ICE）服务器-Coturn" class="headerlink" title="TURN（ICE）服务器 Coturn"></a>TURN（ICE）服务器 <a href="https://github.com/coturn" target="_blank" rel="external">Coturn</a></h2><h1 id="AppRTC部署过程"><a href="#AppRTC部署过程" class="headerlink" title="AppRTC部署过程"></a>AppRTC部署过程</h1><h2 id="部署AppRTC-参考"><a href="#部署AppRTC-参考" class="headerlink" title="部署AppRTC 参考"></a>部署AppRTC <a href="https://github.com/webrtc/apprtc#deployment" target="_blank" rel="external">参考</a></h2><blockquote>
-<p>AppRTC是需要用到<a href="https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python" target="_blank" rel="external">Google App Engine SDK for Python </a>和<a href="http://gruntjs.com/" target="_blank" rel="external">Grunt</a></p>
-</blockquote>
-<ol>
-<li><p>源码下载 </p>
-<blockquote>
-<p>git clone <a href="https://github.com/webrtc/apprtc.git" target="_blank" rel="external">https://github.com/webrtc/apprtc.git</a></p>
-</blockquote>
-</li>
-<li></li>
-</ol>
-<h2 id="部署Collider-参考"><a href="#部署Collider-参考" class="headerlink" title="部署Collider 参考"></a>部署Collider <a href="https://github.com/webrtc/apprtc/blob/master/src/collider/README.md" target="_blank" rel="external">参考</a></h2><blockquote>
-<p>Collider是GO开发的，所以需要安装Go环境，安装参考 <a href="http://golang.org/doc/install" target="_blank" rel="external">http://golang.org/doc/install</a> and <a href="http://golang.org/doc/code.html" target="_blank" rel="external">http://golang.org/doc/code.html</a></p>
-</blockquote>
-<ol>
-<li><p>源码位于apprtc/src/collider/collider</p>
-</li>
-<li><p>确定你已经设置<code>GOPATH</code>环境变量，例如：<code>export GOPATH=$HOME/goWorkspace</code></p>
-</li>
-<li><p>复制一份源码到$GOPATH/src</p>
-<blockquote>
-<p>cp -r apprtc/src/collider $GOPATH/src</p>
-</blockquote>
-</li>
-<li><p>安装依赖性 </p>
-<blockquote>
-<p>go get collidermain</p>
-</blockquote>
-</li>
-<li><p>安装 collidermain </p>
-<blockquote>
-<p>go install collidermain</p>
-</blockquote>
-</li>
-<li><p>启动 collidermain </p>
-<blockquote>
-<p>$GOPATH/bin/collidermain -port=8089 -tls=false -room-server=<a href="http://47.88.32.224:8080" target="_blank" rel="external">http://47.88.32.224:8080</a></p>
-</blockquote>
-</li>
-</ol>
-<h2 id="部署Coturn"><a href="#部署Coturn" class="headerlink" title="部署Coturn"></a>部署Coturn</h2><ol>
-<li><p>源码下载 <code>http://turnserver.open-sys.org/downloads/v4.5.0.3/</code></p>
-</li>
-<li><p>生成加密用的密钥 </p>
-<blockquote>
-<p>sudo openssl req -x509 -newkey rsa:2048 -keyout /usr/local/etc/turn_server_pkey.pem -out /usr/local/etc/turn_server_cert.pem -days 99999 -nodes</p>
-</blockquote>
-</li>
-</ol>
-<h1 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h1><h2 id="启动apprtc"><a href="#启动apprtc" class="headerlink" title="启动apprtc"></a>启动apprtc</h2><ol>
-<li>cd到apprtc目录，执行：<blockquote>
-<p>dev_appserver.py –host 0.0.0.0 ./out/app_engine</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="启动collider"><a href="#启动collider" class="headerlink" title="启动collider"></a>启动collider</h2><ol>
-<li>cd到$GOPATH/bin目录，执行：<blockquote>
-<p>$GOPATH/bin/collidermain -port=8089 -tls=false -room-server=”<a href="http://47.88.32.224:8080" target="_blank" rel="external">http://47.88.32.224:8080</a>“</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="启动coturn"><a href="#启动coturn" class="headerlink" title="启动coturn"></a>启动coturn</h2><h3 id="命令行参数启动"><a href="#命令行参数启动" class="headerlink" title="命令行参数启动"></a>命令行参数启动</h3><blockquote>
-<p>turnserver -a -v -n –no-dtls –no-tls -u linzq:linzq -r “apprtc”</p>
-</blockquote>
-<h3 id="配置文件启动"><a href="#配置文件启动" class="headerlink" title="配置文件启动"></a>配置文件启动</h3><blockquote>
-<p>turnserver -c /etc/turnserver/turnserver.conf</p>
-</blockquote>
-<h3 id="服务启动"><a href="#服务启动" class="headerlink" title="服务启动"></a>服务启动</h3><blockquote>
-<p>service turnserver start</p>
-</blockquote>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><ul>
-<li><a href="https://test.webrtc.org/" target="_blank" rel="external">https://test.webrtc.org/</a></li>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a href="https://webrtc.org/native-code/development/" target="_blank" rel="external">WebRTC Development</a></li>
+<li><a href="https://medium.com/@atsakiridis/building-a-fat-webrtc-framework-on-ios-8610fffb2224#.v7zqct8v9" target="_blank" rel="external">Building a Fat WebRTC framework on iOS</a></li>
+<li><a href="https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md" target="_blank" rel="external">Checking out and Building Chromium for Windows</a></li>
+<li><a href="https://chromium.googlesource.com/chromium/src/+/master/DEPS#234" target="_blank" rel="external">查看chromium项目用的WebRTC版本</a></li>
 </ul>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>1.<a href="http://www.jianshu.com/p/c55ecf5a3fcf" target="_blank" rel="external">自建 AppRTC</a><br>2.<a href="http://io.diveinedu.com/2015/02/05/%E7%AC%AC%E5%85%AD%E7%AB%A0-WebRTC%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA.html" target="_blank" rel="external">第六章 WebRTC服务器搭建</a><br>3.<a href="http://www.hankcs.com/program/network/actual-rfc5766-turn-server-and-ice4j-wide-area-network-communication.html" target="_blank" rel="external">实战rfc5766-turn-server和ice4j广域网通讯</a><br>4.<a href="https://webrtc.github.io/samples/" target="_blank" rel="external">WebRTC samples</a></p>
 
       
     </div>
@@ -481,13 +398,13 @@ git clone https://gith">
       
         <div class="post-tags">
           
-            <a href="/blog/tags/AppRTC/" rel="tag">#AppRTC</a>
-          
             <a href="/blog/tags/WebRTC/" rel="tag">#WebRTC</a>
           
-            <a href="/blog/tags/音视频/" rel="tag">#音视频</a>
+            <a href="/blog/tags/Android/" rel="tag">#Android</a>
           
-            <a href="/blog/tags/部署/" rel="tag">#部署</a>
+            <a href="/blog/tags/混合iOS/" rel="tag">#混合iOS</a>
+          
+            <a href="/blog/tags/编译/" rel="tag">#编译</a>
           
         </div>
       
@@ -496,17 +413,13 @@ git clone https://gith">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/highcharts-2-demo/" rel="next" title="Highcharts Demo">
-                <i class="fa fa-chevron-left"></i> Highcharts Demo
+              <a href="/blog/apprtc-note-0/" rel="next" title="AppRTC服务器部署资料整理">
+                <i class="fa fa-chevron-left"></i> AppRTC服务器部署资料整理
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/webrtc-build-cmd/" rel="prev" title="WebRTC 编译笔记">
-                WebRTC 编译笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -532,8 +445,8 @@ git clone https://gith">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="apprtc-note-0/"
-           data-title="AppRTC服务器部署资料整理" data-url="https://re2x.com/blog/apprtc-note-0/">
+      <div class="ds-thread" data-thread-key="webrtc-build-cmd/"
+           data-title="WebRTC 编译笔记" data-url="https://re2x.com/blog/webrtc-build-cmd/">
       </div>
     
   </div>
@@ -651,7 +564,7 @@ git clone https://gith">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AppRTC介绍"><span class="nav-number">1.</span> <span class="nav-text">AppRTC介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AppRTC服务组件"><span class="nav-number">2.</span> <span class="nav-text">AppRTC服务组件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#业务服务器-AppRTC"><span class="nav-number">2.1.</span> <span class="nav-text">业务服务器 AppRTC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#信令服务器-Collider"><span class="nav-number">2.2.</span> <span class="nav-text">信令服务器 Collider</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TURN（ICE）服务器-Coturn"><span class="nav-number">2.3.</span> <span class="nav-text">TURN（ICE）服务器 Coturn</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AppRTC部署过程"><span class="nav-number">3.</span> <span class="nav-text">AppRTC部署过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#部署AppRTC-参考"><span class="nav-number">3.1.</span> <span class="nav-text">部署AppRTC 参考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署Collider-参考"><span class="nav-number">3.2.</span> <span class="nav-text">部署Collider 参考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署Coturn"><span class="nav-number">3.3.</span> <span class="nav-text">部署Coturn</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#启动服务"><span class="nav-number">4.</span> <span class="nav-text">启动服务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#启动apprtc"><span class="nav-number">4.1.</span> <span class="nav-text">启动apprtc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动collider"><span class="nav-number">4.2.</span> <span class="nav-text">启动collider</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动coturn"><span class="nav-number">4.3.</span> <span class="nav-text">启动coturn</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令行参数启动"><span class="nav-number">4.3.1.</span> <span class="nav-text">命令行参数启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件启动"><span class="nav-number">4.3.2.</span> <span class="nav-text">配置文件启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务启动"><span class="nav-number">4.3.3.</span> <span class="nav-text">服务启动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">4.4.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#iOS产生xcode项目"><span class="nav-number">1.</span> <span class="nav-text">iOS产生xcode项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#iOS-FAT库打包（57后面的版本才可用）"><span class="nav-number">2.</span> <span class="nav-text">iOS FAT库打包（57后面的版本才可用）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#windows产生vs2015编译配置"><span class="nav-number">3.</span> <span class="nav-text">windows产生vs2015编译配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android产生编译配置"><span class="nav-number">4.</span> <span class="nav-text">Android产生编译配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android-aar打包（57后面的版本才可用）"><span class="nav-number">5.</span> <span class="nav-text">Android aar打包（57后面的版本才可用）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android产生Android-Studio编译配置"><span class="nav-number">6.</span> <span class="nav-text">Android产生Android Studio编译配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编译"><span class="nav-number">7.</span> <span class="nav-text">编译</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看编译配置参数"><span class="nav-number">8.</span> <span class="nav-text">查看编译配置参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取特定版本"><span class="nav-number">9.</span> <span class="nav-text">获取特定版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">10.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
           </div>
         </section>
