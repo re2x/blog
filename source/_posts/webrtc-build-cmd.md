@@ -1,6 +1,6 @@
 ---
 title: WebRTC 编译笔记
-date: 2017-02-28 09:52:01
+date: 2017-03-02 09:52:01
 tags:
   - WebRTC
   - Android
@@ -28,8 +28,8 @@ xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARGETS,其
 # windows产生vs2015编译配置
 
 ``` shell
-gn gen out/win_x64 -args="target_cpu=\"x64\" proprietary_codecs=true use_openh264=true  ffmpeg_branding=\"Chrome\"" --ide=vs
-gn gen out/win_x86 -args="target_cpu=\"x86\" proprietary_codecs=true use_openh264=true  ffmpeg_branding=\"Chrome\"" --ide=vs
+gn gen out/win_x64 -args="target_cpu=\"x64\" proprietary_codecs=true use_openh264=true ffmpeg_branding=\"Chrome\"" --ide=vs
+gn gen out/win_x86 -args="target_cpu=\"x86\" proprietary_codecs=true use_openh264=true ffmpeg_branding=\"Chrome\"" --ide=vs
 ```
 
 vs项目文件位置 out/win_x64/all.sln
