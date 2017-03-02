@@ -86,19 +86,19 @@
 
 
 
-<meta name="description" content="iOS产生xcode项目1gn gen out/ios64 -args=&amp;quot;target_os=ios target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode
-xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARG">
+<meta name="description" content="iOS产生xcode项目1gn gen out/ios64 -args=&amp;quot;target_os=\&amp;quot;ios\&amp;quot; target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode
+xcode项目文件位置 out/ios64/all.workspa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WebRTC 编译笔记">
 <meta property="og:url" content="https://re2x.com/webrtc-build-cmd/index.html">
 <meta property="og:site_name" content="rex_log">
-<meta property="og:description" content="iOS产生xcode项目1gn gen out/ios64 -args=&amp;quot;target_os=ios target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode
-xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARG">
-<meta property="og:updated_time" content="2017-03-02T05:54:06.000Z">
+<meta property="og:description" content="iOS产生xcode项目1gn gen out/ios64 -args=&amp;quot;target_os=\&amp;quot;ios\&amp;quot; target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode
+xcode项目文件位置 out/ios64/all.workspa">
+<meta property="og:updated_time" content="2017-03-02T08:53:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WebRTC 编译笔记">
-<meta name="twitter:description" content="iOS产生xcode项目1gn gen out/ios64 -args=&amp;quot;target_os=ios target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode
-xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARG">
+<meta name="twitter:description" content="iOS产生xcode项目1gn gen out/ios64 -args=&amp;quot;target_os=\&amp;quot;ios\&amp;quot; target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode
+xcode项目文件位置 out/ios64/all.workspa">
 
 
 
@@ -346,7 +346,7 @@ xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARG">
       
 
       
-        <h1 id="iOS产生xcode项目"><a href="#iOS产生xcode项目" class="headerlink" title="iOS产生xcode项目"></a>iOS产生xcode项目</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gn gen out/ios64 -args=&quot;target_os=ios target_cpu=\&quot;x64\&quot; is_componnent_build=false proprietary_codecs=true&quot; --ide=xcode</div></pre></td></tr></table></figure>
+        <h1 id="iOS产生xcode项目"><a href="#iOS产生xcode项目" class="headerlink" title="iOS产生xcode项目"></a>iOS产生xcode项目</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gn gen out/ios64 -args=&quot;target_os=\&quot;ios\&quot; target_cpu=\&quot;x64\&quot; is_componnent_build=false proprietary_codecs=true&quot; --ide=xcode</div></pre></td></tr></table></figure>
 <p>xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARGETS,其中AppRTCMobile是apprtc的ios版本</p>
 <h1 id="iOS-FAT库打包（57后面的版本才可用）"><a href="#iOS-FAT库打包（57后面的版本才可用）" class="headerlink" title="iOS FAT库打包（57后面的版本才可用）"></a>iOS FAT库打包（57后面的版本才可用）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./tools-webrtc/ios/build_ios_libs.sh --extra-gn-args=&apos;proprietary_codecs=true&apos;</div></pre></td></tr></table></figure>
 <p>默认生成根目录下 out_ios_libs/WebRTC.framework 文件</p>

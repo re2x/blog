@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://re2x.com/"/>
-  <updated>2017-03-02T05:54:06.000Z</updated>
+  <updated>2017-03-02T08:53:34.000Z</updated>
   <id>https://re2x.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="https://re2x.com/webrtc-build-cmd/"/>
     <id>https://re2x.com/webrtc-build-cmd/</id>
     <published>2017-03-02T01:52:01.000Z</published>
-    <updated>2017-03-02T05:54:06.000Z</updated>
+    <updated>2017-03-02T08:53:34.000Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;iOS产生xcode项目&quot;&gt;&lt;a href=&quot;#iOS产生xcode项目&quot; class=&quot;headerlink&quot; title=&quot;iOS产生xcode项目&quot;&gt;&lt;/a&gt;iOS产生xcode项目&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/ios64 -args=&amp;quot;target_os=ios target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    <content type="html">&lt;h1 id=&quot;iOS产生xcode项目&quot;&gt;&lt;a href=&quot;#iOS产生xcode项目&quot; class=&quot;headerlink&quot; title=&quot;iOS产生xcode项目&quot;&gt;&lt;/a&gt;iOS产生xcode项目&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/ios64 -args=&amp;quot;target_os=\&amp;quot;ios\&amp;quot; target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARGETS,其中AppRTCMobile是apprtc的ios版本&lt;/p&gt;
 &lt;h1 id=&quot;iOS-FAT库打包（57后面的版本才可用）&quot;&gt;&lt;a href=&quot;#iOS-FAT库打包（57后面的版本才可用）&quot; class=&quot;headerlink&quot; title=&quot;iOS FAT库打包（57后面的版本才可用）&quot;&gt;&lt;/a&gt;iOS FAT库打包（57后面的版本才可用）&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;./tools-webrtc/ios/build_ios_libs.sh --extra-gn-args=&amp;apos;proprietary_codecs=true&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;默认生成根目录下 out_ios_libs/WebRTC.framework 文件&lt;/p&gt;
@@ -58,7 +58,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;iOS产生xcode项目&quot;&gt;&lt;a href=&quot;#iOS产生xcode项目&quot; class=&quot;headerlink&quot; title=&quot;iOS产生xcode项目&quot;&gt;&lt;/a&gt;iOS产生xcode项目&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/ios64 -args=&amp;quot;target_os=ios target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;h1 id=&quot;iOS产生xcode项目&quot;&gt;&lt;a href=&quot;#iOS产生xcode项目&quot; class=&quot;headerlink&quot; title=&quot;iOS产生xcode项目&quot;&gt;&lt;/a&gt;iOS产生xcode项目&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/ios64 -args=&amp;quot;target_os=\&amp;quot;ios\&amp;quot; target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARGETS,其中AppRTCMobile是apprtc的ios版本&lt;/p&gt;
 &lt;h1 id=&quot;iOS-FAT库打包（57后面的版本才可用）&quot;&gt;&lt;a href=&quot;#iOS-FAT库打包（57后面的版本才可用）&quot; class=&quot;headerlink&quot; title=&quot;iOS FAT库打包（57后面的版本才可用）&quot;&gt;&lt;/a&gt;iOS FAT库打包（57后面的版本才可用）&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;./tools-webrtc/ios/build_ios_libs.sh --extra-gn-args=&amp;apos;proprietary_codecs=true&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;默认生成根目录下 out_ios_libs/WebRTC.framework 文件&lt;/p&gt;
