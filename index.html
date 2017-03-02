@@ -290,8 +290,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-02-28T09:52:01+08:00" content="2017-02-28">
-              2017-02-28
+            <time itemprop="dateCreated" datetime="2017-03-02T09:52:01+08:00" content="2017-03-02">
+              2017-03-02
             </time>
           </span>
 
@@ -349,9 +349,9 @@
 <p>xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARGETS,其中AppRTCMobile是apprtc的ios版本</p>
 <h1 id="iOS-FAT库打包（57后面的版本才可用）"><a href="#iOS-FAT库打包（57后面的版本才可用）" class="headerlink" title="iOS FAT库打包（57后面的版本才可用）"></a>iOS FAT库打包（57后面的版本才可用）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./tools-webrtc/ios/build_ios_libs.sh --extra-gn-args=&apos;proprietary_codecs=true&apos;</div></pre></td></tr></table></figure>
 <p>默认生成根目录下 out_ios_libs/WebRTC.framework 文件</p>
-<h1 id="windows产生vs2015编译配置"><a href="#windows产生vs2015编译配置" class="headerlink" title="windows产生vs2015编译配置"></a>windows产生vs2015编译配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gn gen out/win_x64 -args=&quot;target_cpu=\&quot;x64\&quot; proprietary_codecs=true&quot; --ide=vs</div><div class="line">gn gen out/win_x86 -args=&quot;target_cpu=\&quot;x86\&quot; proprietary_codecs=true&quot; --ide=vs</div></pre></td></tr></table></figure>
+<h1 id="windows产生vs2015编译配置"><a href="#windows产生vs2015编译配置" class="headerlink" title="windows产生vs2015编译配置"></a>windows产生vs2015编译配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gn gen out/win_x64 -args=&quot;target_cpu=\&quot;x64\&quot; proprietary_codecs=true use_openh264=true ffmpeg_branding=\&quot;Chrome\&quot;&quot; --ide=vs</div><div class="line">gn gen out/win_x86 -args=&quot;target_cpu=\&quot;x86\&quot; proprietary_codecs=true use_openh264=true ffmpeg_branding=\&quot;Chrome\&quot;&quot; --ide=vs</div></pre></td></tr></table></figure>
 <p>vs项目文件位置 out/win_x64/all.sln</p>
-<h1 id="Android产生编译配置"><a href="#Android产生编译配置" class="headerlink" title="Android产生编译配置"></a>Android产生编译配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gn gen out/android_arm -args=&quot;target_os=android target_cpu=\&quot;arm\&quot; is_componnent_build=false proprietary_codecs=true&quot;</div></pre></td></tr></table></figure>
+<h1 id="Android产生编译配置"><a href="#Android产生编译配置" class="headerlink" title="Android产生编译配置"></a>Android产生编译配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gn gen out/android_arm -args=&apos;target_os=&quot;android&quot; target_cpu=&quot;arm&quot; is_componnent_build=false proprietary_codecs=true use_openh264=true ffmpeg_branding=&quot;Chrome&quot;&apos;</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/blog/webrtc-build-cmd/#more" rel="contents">
               阅读全文 &raquo;
