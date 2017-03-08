@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://re2x.com/"/>
-  <updated>2017-03-08T02:59:57.000Z</updated>
+  <updated>2017-03-08T03:19:53.000Z</updated>
   <id>https://re2x.com/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <title>WebRTC 入门介绍</title>
     <link href="https://re2x.com/webrtc-begin-intro/"/>
     <id>https://re2x.com/webrtc-begin-intro/</id>
-    <published>2017-03-03T02:03:03.000Z</published>
-    <updated>2017-03-08T02:59:57.000Z</updated>
+    <published>2017-03-08T03:08:03.000Z</published>
+    <updated>2017-03-08T03:19:53.000Z</updated>
     
     <content type="html">&lt;p&gt;本文不涉及获编译相关，此类内容请看 &lt;a href=&quot;/blog/webrtc-build-cmd/&quot;&gt;WebRTC 编译笔记&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;什么是WebRTC&quot;&gt;&lt;a href=&quot;#什么是WebRTC&quot; class=&quot;headerlink&quot; title=&quot;什么是WebRTC&quot;&gt;&lt;/a&gt;什么是WebRTC&lt;/h1&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;h3 id=&quot;如何实现一个点对点的音视频通话&quot;&gt;&lt;a href=&quot;#如何实现一个点对点的音视频通话&quot; class=&quot;headerlink&quot; title=&quot;如何实现一个点对点的音视频通话&quot;&gt;&lt;/a&gt;如何实现一个点对点的音视频通话&lt;/h3&gt;&lt;ul&gt;
@@ -131,10 +131,16 @@
 &lt;li&gt;ninja 编译工具&lt;/li&gt;
 &lt;li&gt;不论是 Xcode 还是 visual studio 最终还是调用了ninja进行编译&lt;/li&gt;
 &lt;li&gt;增加、删除代码需要修改对应的 BUILD.gn 文件&lt;/li&gt;
+&lt;li&gt;参考chromium的编译    &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromium.googlesource.com/chromium/src/+/master/docs/ios/build_instructions.md#Setting-up-the-build&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS 编译&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromium.googlesource.com/chromium/src/+/master/docs/android_build_instructions.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 编译&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Windows 编译&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;具体查看 &lt;a href=&quot;/blog/webrtc-build-cmd/&quot;&gt;WebRTC 编译笔记&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;怎么看代码&quot;&gt;&lt;a href=&quot;#怎么看代码&quot; class=&quot;headerlink&quot; title=&quot;怎么看代码&quot;&gt;&lt;/a&gt;怎么看代码&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Android Studio + &lt;a href=&quot;https://code.visualstudio.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Visual Studi Code&lt;/a&gt; + 插件&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromium.googlesource.com/chromium/src/+/master/docs/android_studio.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Studio&lt;/a&gt; + &lt;a href=&quot;https://code.visualstudio.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Visual Studi Code&lt;/a&gt; + 插件&lt;/li&gt;
 &lt;li&gt;Xcode 加编译参数 –ide=xcode&lt;/li&gt;
 &lt;li&gt;Visual Studio 加编译参数 –ide=vs&lt;/li&gt;
 &lt;/ul&gt;
@@ -190,7 +196,10 @@
 &lt;li&gt;说说看你们的个人理解&lt;/li&gt;
 &lt;li&gt;有什么疑问&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/WebRTC&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;wiki - WebRTC&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/WebRTC&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;wiki - WebRTC&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromium.googlesource.com/chromium/src/+/master/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chromium docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     
     <summary type="html">
