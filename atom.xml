@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://re2x.com/"/>
-  <updated>2017-03-02T08:53:34.000Z</updated>
+  <updated>2017-03-08T02:04:49.000Z</updated>
   <id>https://re2x.com/</id>
   
   <author>
@@ -16,13 +16,214 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>WebRTC 入门介绍</title>
+    <link href="https://re2x.com/webrtc-begin-intro/"/>
+    <id>https://re2x.com/webrtc-begin-intro/</id>
+    <published>2017-03-03T02:03:03.000Z</published>
+    <updated>2017-03-08T02:04:49.000Z</updated>
+    
+    <content type="html">&lt;p&gt;本文不涉及获编译相关，此类内容请看 &lt;a href=&quot;/blog/webrtc-build-cmd/&quot;&gt;WebRTC 编译笔记&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;什么是WebRTC&quot;&gt;&lt;a href=&quot;#什么是WebRTC&quot; class=&quot;headerlink&quot; title=&quot;什么是WebRTC&quot;&gt;&lt;/a&gt;什么是WebRTC&lt;/h1&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;h3 id=&quot;如何实现一个点对点的音视频通话&quot;&gt;&lt;a href=&quot;#如何实现一个点对点的音视频通话&quot; class=&quot;headerlink&quot; title=&quot;如何实现一个点对点的音视频通话&quot;&gt;&lt;/a&gt;如何实现一个点对点的音视频通话&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Native 实现&lt;br&gt;摄像头访问、编解码、降噪、通讯、渲染、优化&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;web 实现&lt;br&gt;Flash&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;WebRTC是什么&quot;&gt;&lt;a href=&quot;#WebRTC是什么&quot; class=&quot;headerlink&quot; title=&quot;WebRTC是什么&quot;&gt;&lt;/a&gt;WebRTC是什么&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;网页即时通信（英语：Web Real-Time Communication）的缩写，是一个支持网页浏览器进行&lt;strong&gt;实时语音对话或视频对话的API&lt;/strong&gt;。它于2011年6月1日开源并在Google、Mozilla、Opera支持下被纳入万维网联盟的&lt;strong&gt;W3C推荐标准&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;我们说的WebRTC是&quot;&gt;&lt;a href=&quot;#我们说的WebRTC是&quot; class=&quot;headerlink&quot; title=&quot;我们说的WebRTC是&quot;&gt;&lt;/a&gt;我们说的WebRTC是&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;2010年5月，Google以6820万美元收购VoIP软件开发商Global IP Solutions的&lt;strong&gt;GIPS引擎&lt;/strong&gt;，并改为名为“&lt;strong&gt;WebRTC&lt;/strong&gt;”。WebRTC使用GIPS引擎，实现了基于网页的视频会议，并支持722，PCM，ILBC，ISAC等编码，同时使用谷歌自家的VP8视频解码器；同时支持RTP/SRTP传输等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;现状&quot;&gt;&lt;a href=&quot;#现状&quot; class=&quot;headerlink&quot; title=&quot;现状&quot;&gt;&lt;/a&gt;现状&lt;/h2&gt;&lt;h3 id=&quot;支持&quot;&gt;&lt;a href=&quot;#支持&quot; class=&quot;headerlink&quot; title=&quot;支持&quot;&gt;&lt;/a&gt;支持&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://test.webrtc.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;检测是否支持&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/post_images/webrtc_support.png&quot; alt=&quot;API框架图&quot;&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;WebRTC流程&quot;&gt;&lt;a href=&quot;#WebRTC流程&quot; class=&quot;headerlink&quot; title=&quot;WebRTC流程&quot;&gt;&lt;/a&gt;WebRTC流程&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;API框架图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/post_images/WebRTCNativeAPIsDocument.png&quot; alt=&quot;API框架图&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;发起序列图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/post_images/WebRTCNativeAPIsDocument%20%281%29.png&quot; alt=&quot;发起序列图&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;接受序列图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/post_images/WebRTCNativeAPIsDocument%20%282%29.png&quot; alt=&quot;接受序列图&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;结束序列图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/post_images/WebRTCNativeAPIsDocument%20%283%29.png&quot; alt=&quot;结束序列图&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;说说ICE&quot;&gt;&lt;a href=&quot;#说说ICE&quot; class=&quot;headerlink&quot; title=&quot;说说ICE&quot;&gt;&lt;/a&gt;说说ICE&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E4%BA%92%E5%8B%95%E5%BC%8F%E9%80%A3%E6%8E%A5%E5%BB%BA%E7%AB%8B&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;互动式连接建立&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;互动式连接建立是由IETF的MMUSIC工作组开发出来的一种framework，可整合各种NAT穿透技术，如STUN、TURN（Traversal Using Relay NAT，中继NAT实现的穿透）、RSIP（Realm Specific IP，特定域IP）等。该framework可以让SIP的客户端利用各种NAT穿透方式打穿远程的防火墙。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;NAT-网络地址转换&quot;&gt;&lt;a href=&quot;#NAT-网络地址转换&quot; class=&quot;headerlink&quot; title=&quot;NAT 网络地址转换&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;NAT&lt;/a&gt; 网络地址转换&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;也叫做网络掩蔽或者IP掩蔽（IP masquerading），是一种在IP数据包通过路由器或防火墙时重写来源IP地址或目的IP地址的技术。这种技术被普遍使用在有多台主机但只通过一个公有IP地址访问因特网的私有网络中。根据规范，路由器是不能这样工作的，但它的确是一个方便并得到了广泛应用的技术。当然，NAT也让主机之间的通信变得复杂，导致通信效率的降低。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;利用 &lt;a href=&quot;https://pypi.python.org/pypi/pystun&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;pystun&lt;/a&gt; 检测NAT类型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Full cone NAT 全锥型NAT&lt;br&gt;&lt;strong&gt;发过，谁都随便发&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一旦一个内部地址（iAddr:port1）映射到外部地址（eAddr:port2），所有发自iAddr:port1的包都经由eAddr:port2向外发送。&lt;strong&gt;任意外部主机都能通过给eAddr:port2发包到达iAddr:port1&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Address-Restricted cone NAT 限制锥型NAT&lt;br&gt;&lt;strong&gt;发过给你，你随便发&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一旦一个内部地址（iAddr:port1）映射到外部地址（eAddr:port2），所有发自iAddr:port1的包都经由eAddr:port2向外发送。&lt;strong&gt;任意外部主机（hostAddr:any）都能通过给eAddr:port2发包到达iAddr:port1的前提是：iAddr:port1之前发送过包到hostAddr:any. “any”也就是说端口不受限制&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Port-Restricted cone NAT 端口限制锥型NAT&lt;br&gt;&lt;strong&gt;发过你这个端口，这个端口随便发&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一旦一个内部地址（iAddr:port1）映射到外部地址（eAddr:port2），所有发自iAddr:port1的包都经由eAddr:port2向外发送。&lt;strong&gt;一个外部主机（hostAddr:port3）能够发包到达iAddr:port1的前提是：iAddr:port1之前发送过包到hostAddr:port3&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Symmetric NAT 对称型NAT &lt;strong&gt;一一对应&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每一个来自相同内部IP与端口，到一个特定目的地地址和端口的请求，都映射到一个独特的外部IP地址和端口。&lt;br&gt;&lt;strong&gt;同一内部IP与端口发到不同的目的地和端口的信息包，都使用不同的映射&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;提问&lt;br&gt;问题1: A是全锥型NAT（手机），B是端口限制锥型NAT，A、B2个人有直接通讯的可能吗？&lt;br&gt;问题2: C是全锥型NAT，D是对称型NAT(公司)，C、D2个人有直接通讯的可能吗？&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;STUN-穿透&quot;&gt;&lt;a href=&quot;#STUN-穿透&quot; class=&quot;headerlink&quot; title=&quot;STUN 穿透&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/STUN&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;STUN&lt;/a&gt; 穿透&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;STUN（Session Traversal Utilities for NAT，NAT会话穿越应用程序）是一种网络协议，它允许位于NAT（或多重NAT）后的客户端找出自己的公网地址，查出自己位于哪种类型的NAT之后以及NAT为某一个本地端口所绑定的Internet端端口。这些信息被用来在两个同时处于NAT路由器之后的主机之间建立UDP通信。该协议由RFC 5389定义。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;STUN 算法过程&lt;br&gt;&lt;img src=&quot;/blog/post_images/stun-progress.png&quot; alt=&quot;STUN过程&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;TURN-中转&quot;&gt;&lt;a href=&quot;#TURN-中转&quot; class=&quot;headerlink&quot; title=&quot;TURN 中转&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/TURN&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;TURN&lt;/a&gt; 中转&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;TURN是一个client-server协议。TURN的NAT穿透方法与STUN类似，都是通过取得应用层中的公有地址达到NAT穿透。但实现TURN client的终端必须在通讯开始前与TURN server进行交互，并要求TURN server产生”relay port”，也就是relayed-transport-address。这时TURN server会建立peer，即远端端点（remote endpoints），开始进行中继（relay）的动作，TURN client利用relay port将资料传送至peer，再由peer转传到另一方的TURN client。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;WebRTC源码中包含了STUN、TURN的客户端和服务端实现&lt;/p&gt;
+&lt;h1 id=&quot;我们的目标&quot;&gt;&lt;a href=&quot;#我们的目标&quot; class=&quot;headerlink&quot; title=&quot;我们的目标&quot;&gt;&lt;/a&gt;我们的目标&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;实现基于WebRTC的，符合“联享家”和“景医卫”需求的，实时音视频框架。&lt;/li&gt;
+&lt;li&gt;为什么用WebRTC，因为WebRTC实现很多我们需要的功能：音视频编解码，传输，复用等等，以及它的可靠性高，稳定性好，支持多个平台。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;我们要做什么&quot;&gt;&lt;a href=&quot;#我们要做什么&quot; class=&quot;headerlink&quot; title=&quot;我们要做什么&quot;&gt;&lt;/a&gt;我们要做什么&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;首先，能够实现需求所需要的功能（&lt;strong&gt;废话&lt;/strong&gt;）&lt;/li&gt;
+&lt;li&gt;一套完整的音视频流程、机制，包括服务端&lt;ul&gt;
+&lt;li&gt;独立（不和具体需求耦合）&lt;/li&gt;
+&lt;li&gt;复用（能够重复用于多个项目）&lt;/li&gt;
+&lt;li&gt;统一（所有平台尽量统一代码、API，减少维护学习成本）&lt;/li&gt;
+&lt;li&gt;稳定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;基于一个稳定的WebRTC版本进行开发，持续更新合并新的代码&lt;/li&gt;
+&lt;li&gt;实现DTMF收发，H264编解码&lt;/li&gt;
+&lt;li&gt;完善的文档、学习资料&lt;/li&gt;
+&lt;li&gt;小团队维护，持续迭代&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;第一阶段目标&quot;&gt;&lt;a href=&quot;#第一阶段目标&quot; class=&quot;headerlink&quot; title=&quot;第一阶段目标&quot;&gt;&lt;/a&gt;第一阶段目标&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;各个开发人员学习WebRTC开发编译&lt;/li&gt;
+&lt;li&gt;完善所有平台H264支持&lt;/li&gt;
+&lt;li&gt;部署自己的ICE服务器&lt;/li&gt;
+&lt;li&gt;编码实现各个平台的demo app，实现各个平台相互通讯&lt;/li&gt;
+&lt;li&gt;输出相关笔记、文档等资料&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;代码分析&quot;&gt;&lt;a href=&quot;#代码分析&quot; class=&quot;headerlink&quot; title=&quot;代码分析&quot;&gt;&lt;/a&gt;代码分析&lt;/h1&gt;&lt;h2 id=&quot;项目结构&quot;&gt;&lt;a href=&quot;#项目结构&quot; class=&quot;headerlink&quot; title=&quot;项目结构&quot;&gt;&lt;/a&gt;项目结构&lt;/h2&gt;&lt;p&gt;根目录 src/&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;├── base&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── build  编译相关脚本&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── build_overrides  覆盖编译参数&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── buildtools&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── data  测试数据&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── infra&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── resources 需要的资源文件&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── testing&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── third_party 用到的第三方库ffmpeg/openh264...代码，5G左右&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── tools&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── tools-webrtc 一些编译脚本&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;└── webrtc 核心代码&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;核心代码目录 src/webrtc&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;36&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;37&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;38&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;39&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;40&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;41&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;42&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;43&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;44&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;45&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;46&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;47&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;48&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;49&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;50&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;51&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;52&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;53&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;54&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;55&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;56&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;├── api&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── audio&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── base&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── call&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── common_audio&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── common_video&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── h264&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── include&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   └── libyuv&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── examples&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── androidapp Android版AppRTCMbile&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── androidjunit&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── androidtests&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── objc  iOS版AppRTCMbile&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── peerconnection&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── relayserver&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── stunprober&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── stunserver&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   └── turnserver&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── logging&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── media&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── modules&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── audio_coding&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── audio_conference_mixer&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── audio_device&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── audio_mixer&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── audio_processing&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── bitrate_controller&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── congestion_controller&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── desktop_capture&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── include&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── media_file&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── pacing&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── remote_bitrate_estimator&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── rtp_rtcp&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── utility&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── video_capture&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── video_coding&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   └── video_processing&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── p2p&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── base&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── client&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── quic&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   └── stunprober&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── pc&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── sdk&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── android  Android sdk封转&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   └── objc iOS sdk封转&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── stats&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── system_wrappers&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   ├── include&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;│   └── source&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── test&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── tools&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;├── video&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;└── voice_engine&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;编译&quot;&gt;&lt;a href=&quot;#编译&quot; class=&quot;headerlink&quot; title=&quot;编译&quot;&gt;&lt;/a&gt;编译&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;gn 生成编译脚本等&lt;/li&gt;
+&lt;li&gt;ninja 编译工具&lt;/li&gt;
+&lt;li&gt;不论是 Xcode 还是 visual studio 最终还是调用了ninja进行编译&lt;/li&gt;
+&lt;li&gt;增加、删除代码需要修改对应的 BUILD.gn 文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;具体查看 &lt;a href=&quot;/blog/webrtc-build-cmd/&quot;&gt;WebRTC 编译笔记&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;怎么看代码&quot;&gt;&lt;a href=&quot;#怎么看代码&quot; class=&quot;headerlink&quot; title=&quot;怎么看代码&quot;&gt;&lt;/a&gt;怎么看代码&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Android Studio + &lt;a href=&quot;https://code.visualstudio.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Visual Studi Code&lt;/a&gt; + 插件&lt;/li&gt;
+&lt;li&gt;Xcode 加编译参数 –ide=xcode&lt;/li&gt;
+&lt;li&gt;Visual Studio 加编译参数 –ide=vs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;代码管理&quot;&gt;&lt;a href=&quot;#代码管理&quot; class=&quot;headerlink&quot; title=&quot;代码管理&quot;&gt;&lt;/a&gt;代码管理&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;同步代码 &lt;code&gt;gclient sync&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;同步特点版本代码 &lt;code&gt;gclient sync -r git_commit_revision&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;创建分支 &lt;code&gt;git checkout -b linzq/dev/57 remotes/branch-heads/57&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;代码、分支管理建议用sourcetree + gitFlow流程&lt;/li&gt;
+&lt;li&gt;翻墙建议用 shadowsocks，然后 proxifier 或者 proxyCap 来做全局代理&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://build.chromium.org/p/client.webrtc/waterfall&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;webrtc CI日志&lt;/a&gt; 当你不确定checkout的版本是否有问题的时候，看看CI日志的编译情况，可以减少很多查错的时间&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://groups.google.com/forum/#!forum/discuss-webrtc&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;webrtc forum&lt;/a&gt; 版本更新、有疑问这里找&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001373962845513aefd77a99f4145f0a2c7a7ca057e7570000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;git 介绍&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;典型模块&quot;&gt;&lt;a href=&quot;#典型模块&quot; class=&quot;headerlink&quot; title=&quot;典型模块&quot;&gt;&lt;/a&gt;典型模块&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;API &lt;a href=&quot;https://chromium.googlesource.com/external/webrtc/+/master/webrtc/sdk/android/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Java libjingle_peerconnection_java&lt;/a&gt; &lt;strong&gt;&lt;a href=&quot;https://chromium.googlesource.com/external/webrtc/+/master/webrtc/sdk/objc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;objc rtc_sdk_framework&lt;/a&gt;&lt;/strong&gt;  &lt;strong&gt;&lt;a href=&quot;https://chromium.googlesource.com/external/webrtc/+/master/webrtc/pc/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;C++ libjingle_peerconnection&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://chromium.googlesource.com/external/webrtc/+/master/webrtc/modules/video_coding/codecs/h264/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;H264&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;演示&quot;&gt;&lt;a href=&quot;#演示&quot; class=&quot;headerlink&quot; title=&quot;演示&quot;&gt;&lt;/a&gt;演示&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Android &lt;strong&gt;&lt;a href=&quot;https://chromium.googlesource.com/external/webrtc/+/master/tools-webrtc/android/build_aar.py&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;aar包&lt;/a&gt;&lt;/strong&gt;  &lt;strong&gt;&lt;a href=&quot;https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/androidapp/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AppRTCMobile&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;iOS &lt;strong&gt;&lt;a href=&quot;https://chromium.googlesource.com/external/webrtc/+/master/tools-webrtc/ios/build_ios_libs.py&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;FAT库&lt;/a&gt;&lt;/strong&gt;、&lt;strong&gt;&lt;a href=&quot;https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/objc/AppRTCMobile/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AppRTCMobile&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows &lt;strong&gt;&lt;a href=&quot;https://chromium.googlesource.com/external/webrtc/+/master/webrtc/video/video_loopback.cc&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;videoloopback&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;遇到有坑的地方，记得做好笔记，&lt;strong&gt;避免自己再次踩坑、后人受益&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;H264与WebRTC的历史&quot;&gt;&lt;a href=&quot;#H264与WebRTC的历史&quot; class=&quot;headerlink&quot; title=&quot;H264与WebRTC的历史&quot;&gt;&lt;/a&gt;H264与WebRTC的历史&lt;/h1&gt;&lt;h1 id=&quot;初步计划&quot;&gt;&lt;a href=&quot;#初步计划&quot; class=&quot;headerlink&quot; title=&quot;初步计划&quot;&gt;&lt;/a&gt;初步计划&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;3月份，所有成员能够&lt;strong&gt;编译、调试代码&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;4月份，初步完成各个平台的&lt;strong&gt;Demo APP，ICE服务器部署&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;5月份，初步 完成可以与联享家APP、门口机APP&lt;strong&gt;联调的版本&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;6月份，完成第一个&lt;strong&gt;基本的稳定版本&lt;/strong&gt;（各个平台）&lt;/li&gt;
+&lt;li&gt;7月份，&lt;strong&gt;通用的稳定版本&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;怎么做&quot;&gt;&lt;a href=&quot;#怎么做&quot; class=&quot;headerlink&quot; title=&quot;怎么做&quot;&gt;&lt;/a&gt;怎么做&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Just Do it&lt;/li&gt;
+&lt;li&gt;把 &lt;a href=&quot;http://www.webrtc.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;webrtc.org&lt;/a&gt; 上面的内容都仔细看看，会有很多收获的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;讨论&quot;&gt;&lt;a href=&quot;#讨论&quot; class=&quot;headerlink&quot; title=&quot;讨论&quot;&gt;&lt;/a&gt;讨论&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;说说看你们的个人理解&lt;/li&gt;
+&lt;li&gt;有什么疑问&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/WebRTC&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;wiki - WebRTC&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文不涉及获编译相关，此类内容请看 &lt;a href=&quot;/blog/webrtc-build-cmd/&quot;&gt;WebRTC 编译笔记&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;什么是WebRTC&quot;&gt;&lt;a href=&quot;#什么是WebRTC&quot; class=&quot;headerlink&quot; title=&quot;什么是WebRTC&quot;&gt;&lt;/a&gt;什么是WebRTC&lt;/h1&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;h3 id=&quot;如何实现一个点对点的音视频通话&quot;&gt;&lt;a href=&quot;#如何实现一个点对点的音视频通话&quot; class=&quot;headerlink&quot; title=&quot;如何实现一个点对点的音视频通话&quot;&gt;&lt;/a&gt;如何实现一个点对点的音视频通话&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Native 实现&lt;br&gt;摄像头访问、编解码、降噪、通讯、渲染、优化&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;web 实现&lt;br&gt;Flash&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;WebRTC是什么&quot;&gt;&lt;a href=&quot;#WebRTC是什么&quot; class=&quot;headerlink&quot; title=&quot;WebRTC是什么&quot;&gt;&lt;/a&gt;WebRTC是什么&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;网页即时通信（英语：Web Real-Time Communication）的缩写，是一个支持网页浏览器进行&lt;strong&gt;实时语音对话或视频对话的API&lt;/strong&gt;。它于2011年6月1日开源并在Google、Mozilla、Opera支持下被纳入万维网联盟的&lt;strong&gt;W3C推荐标准&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;我们说的WebRTC是&quot;&gt;&lt;a href=&quot;#我们说的WebRTC是&quot; class=&quot;headerlink&quot; title=&quot;我们说的WebRTC是&quot;&gt;&lt;/a&gt;我们说的WebRTC是&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;2010年5月，Google以6820万美元收购VoIP软件开发商Global IP Solutions的&lt;strong&gt;GIPS引擎&lt;/strong&gt;，并改为名为“&lt;strong&gt;WebRTC&lt;/strong&gt;”。WebRTC使用GIPS引擎，实现了基于网页的视频会议，并支持722，PCM，ILBC，ISAC等编码，同时使用谷歌自家的VP8视频解码器；同时支持RTP/SRTP传输等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;现状&quot;&gt;&lt;a href=&quot;#现状&quot; class=&quot;headerlink&quot; title=&quot;现状&quot;&gt;&lt;/a&gt;现状&lt;/h2&gt;&lt;h3 id=&quot;支持&quot;&gt;&lt;a href=&quot;#支持&quot; class=&quot;headerlink&quot; title=&quot;支持&quot;&gt;&lt;/a&gt;支持&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://test.webrtc.org/&quot;&gt;检测是否支持&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/post_images/webrtc_support.png&quot; alt=&quot;API框架图&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="WebRTC" scheme="https://re2x.com/categories/WebRTC/"/>
+    
+    
+      <category term="WebRTC" scheme="https://re2x.com/tags/WebRTC/"/>
+    
+      <category term="Android" scheme="https://re2x.com/tags/Android/"/>
+    
+      <category term="混合iOS" scheme="https://re2x.com/tags/%E6%B7%B7%E5%90%88iOS/"/>
+    
+      <category term="编译" scheme="https://re2x.com/tags/%E7%BC%96%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>WebRTC 编译笔记</title>
     <link href="https://re2x.com/webrtc-build-cmd/"/>
     <id>https://re2x.com/webrtc-build-cmd/</id>
     <published>2017-03-02T01:52:01.000Z</published>
-    <updated>2017-03-02T08:53:34.000Z</updated>
+    <updated>2017-03-07T07:33:03.000Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;iOS产生xcode项目&quot;&gt;&lt;a href=&quot;#iOS产生xcode项目&quot; class=&quot;headerlink&quot; title=&quot;iOS产生xcode项目&quot;&gt;&lt;/a&gt;iOS产生xcode项目&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/ios64 -args=&amp;quot;target_os=\&amp;quot;ios\&amp;quot; target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    <content type="html">&lt;h1 id=&quot;iOS产生xcode项目&quot;&gt;&lt;a href=&quot;#iOS产生xcode项目&quot; class=&quot;headerlink&quot; title=&quot;iOS产生xcode项目&quot;&gt;&lt;/a&gt;iOS产生xcode项目&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/ios64 -args=&amp;quot;target_os=\&amp;quot;ios\&amp;quot; target_cpu=\&amp;quot;x64\&amp;quot; is_component_build=false proprietary_codecs=true ios_enable_code_signing=false&amp;quot; --ide=xcode&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARGETS,其中AppRTCMobile是apprtc的ios版本&lt;/p&gt;
 &lt;h1 id=&quot;iOS-FAT库打包（57后面的版本才可用）&quot;&gt;&lt;a href=&quot;#iOS-FAT库打包（57后面的版本才可用）&quot; class=&quot;headerlink&quot; title=&quot;iOS FAT库打包（57后面的版本才可用）&quot;&gt;&lt;/a&gt;iOS FAT库打包（57后面的版本才可用）&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;./tools-webrtc/ios/build_ios_libs.sh --extra-gn-args=&amp;apos;proprietary_codecs=true&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;默认生成根目录下 out_ios_libs/WebRTC.framework 文件&lt;/p&gt;
@@ -58,7 +259,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;iOS产生xcode项目&quot;&gt;&lt;a href=&quot;#iOS产生xcode项目&quot; class=&quot;headerlink&quot; title=&quot;iOS产生xcode项目&quot;&gt;&lt;/a&gt;iOS产生xcode项目&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/ios64 -args=&amp;quot;target_os=\&amp;quot;ios\&amp;quot; target_cpu=\&amp;quot;x64\&amp;quot; is_componnent_build=false proprietary_codecs=true&amp;quot; --ide=xcode&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;h1 id=&quot;iOS产生xcode项目&quot;&gt;&lt;a href=&quot;#iOS产生xcode项目&quot; class=&quot;headerlink&quot; title=&quot;iOS产生xcode项目&quot;&gt;&lt;/a&gt;iOS产生xcode项目&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/ios64 -args=&amp;quot;target_os=\&amp;quot;ios\&amp;quot; target_cpu=\&amp;quot;x64\&amp;quot; is_component_build=false proprietary_codecs=true ios_enable_code_signing=false&amp;quot; --ide=xcode&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARGETS,其中AppRTCMobile是apprtc的ios版本&lt;/p&gt;
 &lt;h1 id=&quot;iOS-FAT库打包（57后面的版本才可用）&quot;&gt;&lt;a href=&quot;#iOS-FAT库打包（57后面的版本才可用）&quot; class=&quot;headerlink&quot; title=&quot;iOS FAT库打包（57后面的版本才可用）&quot;&gt;&lt;/a&gt;iOS FAT库打包（57后面的版本才可用）&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;./tools-webrtc/ios/build_ios_libs.sh --extra-gn-args=&amp;apos;proprietary_codecs=true&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;默认生成根目录下 out_ios_libs/WebRTC.framework 文件&lt;/p&gt;
@@ -194,52 +395,6 @@
     <id>https://re2x.com/highcharts-2-demo/</id>
     <published>2016-07-29T06:40:34.000Z</published>
     <updated>2016-10-28T06:59:04.000Z</updated>
-    
-    <content type="html">&lt;p&gt;最近在项目中用到了highcharts来实现图表功能，做了几个demo给相关的同事&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/demo/charts/charts_demo.html&quot;&gt;最近7日数据&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;/demo/charts/charts_demo.html&quot;&gt;&lt;/iframe&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/demo/bp-charts/bp-charts.html?show=14&amp;amp;dl=1&quot;&gt;血压数据&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;/demo/bp-charts/bp-charts.html?show=14&amp;amp;dl=1&quot;&gt;&lt;/iframe&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/demo/bp-charts/ss-charts.html?show=21&amp;amp;type=%E8%A1%80%E6%B0%A7%E9%A5%B1%E5%92%8C%E5%BA%A6&quot;&gt;血氧饱和度&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;iframe style=&quot;border:none;width:100%;height:250px;&quot; src=&quot;/demo/bp-charts/ss-charts.html?show=21&amp;type=%E8%A1%80%E6%B0%A7%E9%A5%B1%E5%92%8C%E5%BA%A6&quot;&gt;&lt;/iframe&gt;
-
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近在项目中用到了highcharts来实现图表功能，做了几个demo给相关的同事&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/demo/charts/charts_demo.html&quot;&gt;最近7日数据&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;iframe style=&quot;borde
-    
-    </summary>
-    
-      <category term="Demo" scheme="https://re2x.com/categories/Demo/"/>
-    
-    
-      <category term="Highcharts" scheme="https://re2x.com/tags/Highcharts/"/>
-    
-      <category term="Demo" scheme="https://re2x.com/tags/Demo/"/>
-    
-      <category term="图表" scheme="https://re2x.com/tags/%E5%9B%BE%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Highcharts Demo</title>
-    <link href="https://re2x.com/%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BEdemo/"/>
-    <id>https://re2x.com/高德地图demo/</id>
-    <published>2016-07-29T06:40:34.000Z</published>
-    <updated>2016-10-28T07:03:06.000Z</updated>
     
     <content type="html">&lt;p&gt;最近在项目中用到了highcharts来实现图表功能，做了几个demo给相关的同事&lt;/p&gt;
 &lt;ul&gt;
