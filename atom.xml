@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://re2x.com/"/>
-  <updated>2017-03-08T03:26:43.000Z</updated>
+  <updated>2017-03-08T05:57:33.000Z</updated>
   <id>https://re2x.com/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="https://re2x.com/webrtc-begin-intro/"/>
     <id>https://re2x.com/webrtc-begin-intro/</id>
     <published>2017-03-08T03:08:03.000Z</published>
-    <updated>2017-03-08T03:26:43.000Z</updated>
+    <updated>2017-03-08T05:57:33.000Z</updated>
     
     <content type="html">&lt;p&gt;本文不涉及获编译相关，此类内容请看 &lt;a href=&quot;/blog/webrtc-build-cmd/&quot;&gt;WebRTC 编译笔记&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;什么是WebRTC&quot;&gt;&lt;a href=&quot;#什么是WebRTC&quot; class=&quot;headerlink&quot; title=&quot;什么是WebRTC&quot;&gt;&lt;/a&gt;什么是WebRTC&lt;/h1&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;h3 id=&quot;如何实现一个点对点的音视频通话&quot;&gt;&lt;a href=&quot;#如何实现一个点对点的音视频通话&quot; class=&quot;headerlink&quot; title=&quot;如何实现一个点对点的音视频通话&quot;&gt;&lt;/a&gt;如何实现一个点对点的音视频通话&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Native 实现&lt;br&gt;摄像头访问、编解码、降噪、通讯、渲染、优化&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Native 实现&lt;br&gt;摄像头访问、编解码、降噪、信令、数据通讯、渲染、优化&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;web 实现&lt;br&gt;Flash&lt;/p&gt;
 &lt;/li&gt;
@@ -206,7 +206,7 @@
     
       &lt;p&gt;本文不涉及获编译相关，此类内容请看 &lt;a href=&quot;/blog/webrtc-build-cmd/&quot;&gt;WebRTC 编译笔记&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;什么是WebRTC&quot;&gt;&lt;a href=&quot;#什么是WebRTC&quot; class=&quot;headerlink&quot; title=&quot;什么是WebRTC&quot;&gt;&lt;/a&gt;什么是WebRTC&lt;/h1&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;h3 id=&quot;如何实现一个点对点的音视频通话&quot;&gt;&lt;a href=&quot;#如何实现一个点对点的音视频通话&quot; class=&quot;headerlink&quot; title=&quot;如何实现一个点对点的音视频通话&quot;&gt;&lt;/a&gt;如何实现一个点对点的音视频通话&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Native 实现&lt;br&gt;摄像头访问、编解码、降噪、通讯、渲染、优化&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Native 实现&lt;br&gt;摄像头访问、编解码、降噪、信令、数据通讯、渲染、优化&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;web 实现&lt;br&gt;Flash&lt;/p&gt;
 &lt;/li&gt;
