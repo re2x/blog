@@ -114,7 +114,7 @@ WebRTC是什么
 <meta property="og:image" content="https://re2x.com/blog/post_images/WebRTCNativeAPIsDocument%20%282%29.png">
 <meta property="og:image" content="https://re2x.com/blog/post_images/WebRTCNativeAPIsDocument%20%283%29.png">
 <meta property="og:image" content="https://re2x.com/blog/post_images/stun-progress.png">
-<meta property="og:updated_time" content="2017-03-08T02:04:49.000Z">
+<meta property="og:updated_time" content="2017-03-08T02:59:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WebRTC 入门介绍">
 <meta name="twitter:description" content="本文不涉及获编译相关，此类内容请看 WebRTC 编译笔记
@@ -517,7 +517,17 @@ WebRTC是什么
 <blockquote>
 <p>遇到有坑的地方，记得做好笔记，<strong>避免自己再次踩坑、后人受益</strong></p>
 </blockquote>
-<h1 id="H264与WebRTC的历史"><a href="#H264与WebRTC的历史" class="headerlink" title="H264与WebRTC的历史"></a>H264与WebRTC的历史</h1><h1 id="初步计划"><a href="#初步计划" class="headerlink" title="初步计划"></a>初步计划</h1><ol>
+<h1 id="H264与WebRTC的历史"><a href="#H264与WebRTC的历史" class="headerlink" title="H264与WebRTC的历史"></a>H264与WebRTC的历史</h1><ul>
+<li>15年左右的版本是不只是H264的编解码的</li>
+<li>16年增加了openh264实现编码，沿用原来的ffmpeg代码来实现解码</li>
+<li>最新的是:<ul>
+<li>非android/iOS已经实现了软编解码(openh264+ffmepg)</li>
+<li>iOS 使用了硬编解码</li>
+<li>Android针对高通、三星平台使用硬编解码，其他不支持</li>
+</ul>
+</li>
+</ul>
+<h1 id="初步计划"><a href="#初步计划" class="headerlink" title="初步计划"></a>初步计划</h1><ol>
 <li>3月份，所有成员能够<strong>编译、调试代码</strong></li>
 <li>4月份，初步完成各个平台的<strong>Demo APP，ICE服务器部署</strong></li>
 <li>5月份，初步 完成可以与联享家APP、门口机APP<strong>联调的版本</strong></li>
