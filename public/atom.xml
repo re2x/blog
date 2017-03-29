@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://re2x.com/"/>
-  <updated>2017-03-08T02:04:49.000Z</updated>
+  <updated>2017-03-08T05:57:33.000Z</updated>
   <id>https://re2x.com/</id>
   
   <author>
@@ -19,12 +19,12 @@
     <title>WebRTC 入门介绍</title>
     <link href="https://re2x.com/webrtc-begin-intro/"/>
     <id>https://re2x.com/webrtc-begin-intro/</id>
-    <published>2017-03-03T02:03:03.000Z</published>
-    <updated>2017-03-08T02:04:49.000Z</updated>
+    <published>2017-03-08T03:08:03.000Z</published>
+    <updated>2017-03-08T05:57:33.000Z</updated>
     
     <content type="html">&lt;p&gt;本文不涉及获编译相关，此类内容请看 &lt;a href=&quot;/blog/webrtc-build-cmd/&quot;&gt;WebRTC 编译笔记&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;什么是WebRTC&quot;&gt;&lt;a href=&quot;#什么是WebRTC&quot; class=&quot;headerlink&quot; title=&quot;什么是WebRTC&quot;&gt;&lt;/a&gt;什么是WebRTC&lt;/h1&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;h3 id=&quot;如何实现一个点对点的音视频通话&quot;&gt;&lt;a href=&quot;#如何实现一个点对点的音视频通话&quot; class=&quot;headerlink&quot; title=&quot;如何实现一个点对点的音视频通话&quot;&gt;&lt;/a&gt;如何实现一个点对点的音视频通话&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Native 实现&lt;br&gt;摄像头访问、编解码、降噪、通讯、渲染、优化&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Native 实现&lt;br&gt;摄像头访问、编解码、降噪、信令、数据通讯、渲染、优化&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;web 实现&lt;br&gt;Flash&lt;/p&gt;
 &lt;/li&gt;
@@ -131,10 +131,16 @@
 &lt;li&gt;ninja 编译工具&lt;/li&gt;
 &lt;li&gt;不论是 Xcode 还是 visual studio 最终还是调用了ninja进行编译&lt;/li&gt;
 &lt;li&gt;增加、删除代码需要修改对应的 BUILD.gn 文件&lt;/li&gt;
+&lt;li&gt;参考chromium的编译    &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromium.googlesource.com/chromium/src/+/master/docs/ios/build_instructions.md#Setting-up-the-build&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS 编译&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromium.googlesource.com/chromium/src/+/master/docs/android_build_instructions.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android 编译&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Windows 编译&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;具体查看 &lt;a href=&quot;/blog/webrtc-build-cmd/&quot;&gt;WebRTC 编译笔记&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;怎么看代码&quot;&gt;&lt;a href=&quot;#怎么看代码&quot; class=&quot;headerlink&quot; title=&quot;怎么看代码&quot;&gt;&lt;/a&gt;怎么看代码&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Android Studio + &lt;a href=&quot;https://code.visualstudio.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Visual Studi Code&lt;/a&gt; + 插件&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromium.googlesource.com/chromium/src/+/master/docs/android_studio.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android Studio&lt;/a&gt; + &lt;a href=&quot;https://groups.google.com/forum/#!topic/discuss-webrtc/b7yQjvPLHaM&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AppRTCMobile can now be developed in Android Studio&lt;/a&gt; + &lt;a href=&quot;https://code.visualstudio.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Visual Studi Code&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Xcode 加编译参数 –ide=xcode&lt;/li&gt;
 &lt;li&gt;Visual Studio 加编译参数 –ide=vs&lt;/li&gt;
 &lt;/ul&gt;
@@ -165,7 +171,17 @@
 &lt;blockquote&gt;
 &lt;p&gt;遇到有坑的地方，记得做好笔记，&lt;strong&gt;避免自己再次踩坑、后人受益&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&quot;H264与WebRTC的历史&quot;&gt;&lt;a href=&quot;#H264与WebRTC的历史&quot; class=&quot;headerlink&quot; title=&quot;H264与WebRTC的历史&quot;&gt;&lt;/a&gt;H264与WebRTC的历史&lt;/h1&gt;&lt;h1 id=&quot;初步计划&quot;&gt;&lt;a href=&quot;#初步计划&quot; class=&quot;headerlink&quot; title=&quot;初步计划&quot;&gt;&lt;/a&gt;初步计划&lt;/h1&gt;&lt;ol&gt;
+&lt;h1 id=&quot;H264与WebRTC的历史&quot;&gt;&lt;a href=&quot;#H264与WebRTC的历史&quot; class=&quot;headerlink&quot; title=&quot;H264与WebRTC的历史&quot;&gt;&lt;/a&gt;H264与WebRTC的历史&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;15年左右的版本是不只是H264的编解码的&lt;/li&gt;
+&lt;li&gt;16年增加了openh264实现编码，沿用原来的ffmpeg代码来实现解码&lt;/li&gt;
+&lt;li&gt;最新的是:&lt;ul&gt;
+&lt;li&gt;非android/iOS已经实现了软编解码(openh264+ffmepg)&lt;/li&gt;
+&lt;li&gt;iOS 使用了硬编解码&lt;/li&gt;
+&lt;li&gt;Android针对高通、三星平台使用硬编解码，其他不支持&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;初步计划&quot;&gt;&lt;a href=&quot;#初步计划&quot; class=&quot;headerlink&quot; title=&quot;初步计划&quot;&gt;&lt;/a&gt;初步计划&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;3月份，所有成员能够&lt;strong&gt;编译、调试代码&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;4月份，初步完成各个平台的&lt;strong&gt;Demo APP，ICE服务器部署&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;5月份，初步 完成可以与联享家APP、门口机APP&lt;strong&gt;联调的版本&lt;/strong&gt;&lt;/li&gt;
@@ -180,14 +196,17 @@
 &lt;li&gt;说说看你们的个人理解&lt;/li&gt;
 &lt;li&gt;有什么疑问&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/WebRTC&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;wiki - WebRTC&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/WebRTC&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;wiki - WebRTC&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromium.googlesource.com/chromium/src/+/master/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chromium docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     
     <summary type="html">
     
       &lt;p&gt;本文不涉及获编译相关，此类内容请看 &lt;a href=&quot;/blog/webrtc-build-cmd/&quot;&gt;WebRTC 编译笔记&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;什么是WebRTC&quot;&gt;&lt;a href=&quot;#什么是WebRTC&quot; class=&quot;headerlink&quot; title=&quot;什么是WebRTC&quot;&gt;&lt;/a&gt;什么是WebRTC&lt;/h1&gt;&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;h3 id=&quot;如何实现一个点对点的音视频通话&quot;&gt;&lt;a href=&quot;#如何实现一个点对点的音视频通话&quot; class=&quot;headerlink&quot; title=&quot;如何实现一个点对点的音视频通话&quot;&gt;&lt;/a&gt;如何实现一个点对点的音视频通话&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Native 实现&lt;br&gt;摄像头访问、编解码、降噪、通讯、渲染、优化&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Native 实现&lt;br&gt;摄像头访问、编解码、降噪、信令、数据通讯、渲染、优化&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;web 实现&lt;br&gt;Flash&lt;/p&gt;
 &lt;/li&gt;
@@ -221,10 +240,11 @@
     <link href="https://re2x.com/webrtc-build-cmd/"/>
     <id>https://re2x.com/webrtc-build-cmd/</id>
     <published>2017-03-02T01:52:01.000Z</published>
-    <updated>2017-03-07T07:33:03.000Z</updated>
+    <updated>2017-03-13T06:23:06.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;iOS产生xcode项目&quot;&gt;&lt;a href=&quot;#iOS产生xcode项目&quot; class=&quot;headerlink&quot; title=&quot;iOS产生xcode项目&quot;&gt;&lt;/a&gt;iOS产生xcode项目&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/ios64 -args=&amp;quot;target_os=\&amp;quot;ios\&amp;quot; target_cpu=\&amp;quot;x64\&amp;quot; is_component_build=false proprietary_codecs=true ios_enable_code_signing=false&amp;quot; --ide=xcode&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARGETS,其中AppRTCMobile是apprtc的ios版本&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;iOS真机调试必须ios_enable_code_signing=true，target_cpu=arm或target_cpu=arm64。&lt;br&gt;&lt;br&gt;如果存在多个签名要增加参数ios_code_signing_identity=[UUID]，具体这个UUID请 &lt;a href=&quot;#查看iOS本地签名uuid&quot;&gt;查看iOS本地签名uuid&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&quot;iOS-FAT库打包（57后面的版本才可用）&quot;&gt;&lt;a href=&quot;#iOS-FAT库打包（57后面的版本才可用）&quot; class=&quot;headerlink&quot; title=&quot;iOS FAT库打包（57后面的版本才可用）&quot;&gt;&lt;/a&gt;iOS FAT库打包（57后面的版本才可用）&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;./tools-webrtc/ios/build_ios_libs.sh --extra-gn-args=&amp;apos;proprietary_codecs=true&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;默认生成根目录下 out_ios_libs/WebRTC.framework 文件&lt;/p&gt;
 &lt;h1 id=&quot;windows产生vs2015编译配置&quot;&gt;&lt;a href=&quot;#windows产生vs2015编译配置&quot; class=&quot;headerlink&quot; title=&quot;windows产生vs2015编译配置&quot;&gt;&lt;/a&gt;windows产生vs2015编译配置&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/win_x64 -args=&amp;quot;target_cpu=\&amp;quot;x64\&amp;quot; proprietary_codecs=true use_openh264=true ffmpeg_branding=\&amp;quot;Chrome\&amp;quot;&amp;quot; --ide=vs&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/win_x86 -args=&amp;quot;target_cpu=\&amp;quot;x86\&amp;quot; proprietary_codecs=true use_openh264=true ffmpeg_branding=\&amp;quot;Chrome\&amp;quot;&amp;quot; --ide=vs&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -245,6 +265,9 @@
 &lt;h1 id=&quot;编译&quot;&gt;&lt;a href=&quot;#编译&quot; class=&quot;headerlink&quot; title=&quot;编译&quot;&gt;&lt;/a&gt;编译&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;ninja -C out/debug&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h1 id=&quot;查看编译配置参数&quot;&gt;&lt;a href=&quot;#查看编译配置参数&quot; class=&quot;headerlink&quot; title=&quot;查看编译配置参数&quot;&gt;&lt;/a&gt;查看编译配置参数&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn args out/debug --list&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h1 id=&quot;查看可用的target&quot;&gt;&lt;a href=&quot;#查看可用的target&quot; class=&quot;headerlink&quot; title=&quot;查看可用的target&quot;&gt;&lt;/a&gt;查看可用的target&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn ls out/debug&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;查看iOS本地签名uuid&quot;&gt;&lt;a href=&quot;#查看iOS本地签名uuid&quot; class=&quot;headerlink&quot; title=&quot;查看iOS本地签名uuid&quot;&gt;&lt;/a&gt;查看iOS本地签名uuid&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;xcrun security find-identity -v -p codesigning&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;查看iOS-app签名信息&quot;&gt;&lt;a href=&quot;#查看iOS-app签名信息&quot; class=&quot;headerlink&quot; title=&quot;查看iOS app签名信息&quot;&gt;&lt;/a&gt;查看iOS app签名信息&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;codesign -vv -d AppRTCMobile.app&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;查看iOS-app-provisoning信息&quot;&gt;&lt;a href=&quot;#查看iOS-app-provisoning信息&quot; class=&quot;headerlink&quot; title=&quot;查看iOS app provisoning信息&quot;&gt;&lt;/a&gt;查看iOS app provisoning信息&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;mobileprovision-read -f AppRTCMobile.app/embedded.mobileprovision&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h1 id=&quot;获取特定版本&quot;&gt;&lt;a href=&quot;#获取特定版本&quot; class=&quot;headerlink&quot; title=&quot;获取特定版本&quot;&gt;&lt;/a&gt;获取特定版本&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;获取正式的版本：使用 &lt;code&gt;gclient sync&lt;/code&gt; 下载完全部代码后，在代码目录下用 &lt;code&gt;git branch -a&lt;/code&gt; 查看所有版本，并用&lt;code&gt;git checkout remotes/branch-heads/57&lt;/code&gt; 获取57这个版本。&lt;/li&gt;
 &lt;li&gt;获取某次commit的版本：使用 &lt;code&gt;gclient sync -r src@037ee92455a6e7fc01efb4397a6cdcf8e49389b4&lt;/code&gt; 获取037ee92455a6e7fc01efb4397a6cdcf8e49389b4这个commit id的版本。&lt;/li&gt;
@@ -261,6 +284,7 @@
     
       &lt;h1 id=&quot;iOS产生xcode项目&quot;&gt;&lt;a href=&quot;#iOS产生xcode项目&quot; class=&quot;headerlink&quot; title=&quot;iOS产生xcode项目&quot;&gt;&lt;/a&gt;iOS产生xcode项目&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/ios64 -args=&amp;quot;target_os=\&amp;quot;ios\&amp;quot; target_cpu=\&amp;quot;x64\&amp;quot; is_component_build=false proprietary_codecs=true ios_enable_code_signing=false&amp;quot; --ide=xcode&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARGETS,其中AppRTCMobile是apprtc的ios版本&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;iOS真机调试必须ios_enable_code_signing=true，target_cpu=arm或target_cpu=arm64。&lt;br /&gt;&lt;br&gt;如果存在多个签名要增加参数ios_code_signing_identity=[UUID]，具体这个UUID请 &lt;a href=&quot;#查看iOS本地签名uuid&quot;&gt;查看iOS本地签名uuid&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&quot;iOS-FAT库打包（57后面的版本才可用）&quot;&gt;&lt;a href=&quot;#iOS-FAT库打包（57后面的版本才可用）&quot; class=&quot;headerlink&quot; title=&quot;iOS FAT库打包（57后面的版本才可用）&quot;&gt;&lt;/a&gt;iOS FAT库打包（57后面的版本才可用）&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;./tools-webrtc/ios/build_ios_libs.sh --extra-gn-args=&amp;apos;proprietary_codecs=true&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;默认生成根目录下 out_ios_libs/WebRTC.framework 文件&lt;/p&gt;
 &lt;h1 id=&quot;windows产生vs2015编译配置&quot;&gt;&lt;a href=&quot;#windows产生vs2015编译配置&quot; class=&quot;headerlink&quot; title=&quot;windows产生vs2015编译配置&quot;&gt;&lt;/a&gt;windows产生vs2015编译配置&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/win_x64 -args=&amp;quot;target_cpu=\&amp;quot;x64\&amp;quot; proprietary_codecs=true use_openh264=true ffmpeg_branding=\&amp;quot;Chrome\&amp;quot;&amp;quot; --ide=vs&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gn gen out/win_x86 -args=&amp;quot;target_cpu=\&amp;quot;x86\&amp;quot; proprietary_codecs=true use_openh264=true ffmpeg_branding=\&amp;quot;Chrome\&amp;quot;&amp;quot; --ide=vs&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;

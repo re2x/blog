@@ -1,6 +1,6 @@
 ---
 title: WebRTC 入门介绍
-date: 2017-03-03 10:03:03
+date: 2017-03-08 11:08:03
 tags:
   - WebRTC
   - Android
@@ -16,7 +16,7 @@ categories:
 ## 背景
 ### 如何实现一个点对点的音视频通话
 * Native 实现  
-摄像头访问、编解码、降噪、通讯、渲染、优化
+摄像头访问、编解码、降噪、信令、数据通讯、渲染、优化
 
 * web 实现  
 Flash
@@ -206,11 +206,15 @@ WebRTC源码中包含了STUN、TURN的客户端和服务端实现
 * ninja 编译工具
 * 不论是 Xcode 还是 visual studio 最终还是调用了ninja进行编译
 * 增加、删除代码需要修改对应的 BUILD.gn 文件
+* 参考chromium的编译	
+	* [iOS 编译](https://chromium.googlesource.com/chromium/src/+/master/docs/ios/build_instructions.md#Setting-up-the-build)
+	* [Android 编译](https://chromium.googlesource.com/chromium/src/+/master/docs/android_build_instructions.md)
+	* [Windows 编译](https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md)
 
 具体查看 [WebRTC 编译笔记](/blog/webrtc-build-cmd/)
 
 ## 怎么看代码
-* Android Studio + [Visual Studi Code](https://code.visualstudio.com/) + 插件
+* [Android Studio](https://chromium.googlesource.com/chromium/src/+/master/docs/android_studio.md) + [AppRTCMobile can now be developed in Android Studio](https://groups.google.com/forum/#!topic/discuss-webrtc/b7yQjvPLHaM) + [Visual Studi Code](https://code.visualstudio.com/)
 * Xcode 加编译参数 --ide=xcode
 * Visual Studio 加编译参数 --ide=vs
 
@@ -239,6 +243,12 @@ WebRTC源码中包含了STUN、TURN的客户端和服务端实现
 > 遇到有坑的地方，记得做好笔记，**避免自己再次踩坑、后人受益**
 
 # H264与WebRTC的历史
+* 15年左右的版本是不只是H264的编解码的
+* 16年增加了openh264实现编码，沿用原来的ffmpeg代码来实现解码
+* 最新的是:
+	* 非android/iOS已经实现了软编解码(openh264+ffmepg)
+	* iOS 使用了硬编解码
+	* Android针对高通、三星平台使用硬编解码，其他不支持
 
 # 初步计划
 1. 3月份，所有成员能够**编译、调试代码**
@@ -257,4 +267,5 @@ WebRTC源码中包含了STUN、TURN的客户端和服务端实现
 
 
 # 参考
-[wiki - WebRTC](https://zh.wikipedia.org/wiki/WebRTC)
+* [wiki - WebRTC](https://zh.wikipedia.org/wiki/WebRTC)  
+* [Chromium docs](https://chromium.googlesource.com/chromium/src/+/master/docs/)

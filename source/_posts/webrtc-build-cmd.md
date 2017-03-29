@@ -17,6 +17,9 @@ gn gen out/ios64 -args="target_os=\"ios\" target_cpu=\"x64\" is_component_build=
 ```
 xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARGETS,其中AppRTCMobile是apprtc的ios版本
 
+**iOS真机调试必须ios_enable_code_signing=true，target_cpu=arm或target_cpu=arm64。<br />
+如果存在多个签名要增加参数ios_code_signing_identity=[UUID]，具体这个UUID请 [查看iOS本地签名uuid](#查看iOS本地签名uuid)**
+
 # iOS FAT库打包（57后面的版本才可用）
 
 ``` shell
@@ -94,6 +97,21 @@ gn args out/debug --list
 
 ``` shell
 gn ls out/debug
+```
+
+# 查看iOS本地签名uuid
+``` shell
+xcrun security find-identity -v -p codesigning
+```
+
+# 查看iOS app签名信息
+``` shell
+codesign -vv -d AppRTCMobile.app 
+```
+
+# 查看iOS app provisoning信息
+``` shell
+mobileprovision-read -f AppRTCMobile.app/embedded.mobileprovision
 ```
 
 # 获取特定版本

@@ -94,7 +94,7 @@ xcod">
 <meta property="og:site_name" content="rex_log">
 <meta property="og:description" content="iOS产生xcode项目1gn gen out/ios64 -args=&amp;quot;target_os=\&amp;quot;ios\&amp;quot; target_cpu=\&amp;quot;x64\&amp;quot; is_component_build=false proprietary_codecs=true ios_enable_code_signing=false&amp;quot; --ide=xcode
 xcod">
-<meta property="og:updated_time" content="2017-03-07T07:33:03.000Z">
+<meta property="og:updated_time" content="2017-03-13T06:23:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WebRTC 编译笔记">
 <meta name="twitter:description" content="iOS产生xcode项目1gn gen out/ios64 -args=&amp;quot;target_os=\&amp;quot;ios\&amp;quot; target_cpu=\&amp;quot;x64\&amp;quot; is_component_build=false proprietary_codecs=true ios_enable_code_signing=false&amp;quot; --ide=xcode
@@ -242,6 +242,16 @@ xcod">
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-webrtc-wiki">
+          <a href="http://www.re2x.com/WebRTC-wiki" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            menu.webrtc-wiki
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -348,6 +358,7 @@ xcod">
       
         <h1 id="iOS产生xcode项目"><a href="#iOS产生xcode项目" class="headerlink" title="iOS产生xcode项目"></a>iOS产生xcode项目</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gn gen out/ios64 -args=&quot;target_os=\&quot;ios\&quot; target_cpu=\&quot;x64\&quot; is_component_build=false proprietary_codecs=true ios_enable_code_signing=false&quot; --ide=xcode</div></pre></td></tr></table></figure>
 <p>xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARGETS,其中AppRTCMobile是apprtc的ios版本</p>
+<p><strong>iOS真机调试必须ios_enable_code_signing=true，target_cpu=arm或target_cpu=arm64。<br><br>如果存在多个签名要增加参数ios_code_signing_identity=[UUID]，具体这个UUID请 <a href="#查看iOS本地签名uuid">查看iOS本地签名uuid</a></strong></p>
 <h1 id="iOS-FAT库打包（57后面的版本才可用）"><a href="#iOS-FAT库打包（57后面的版本才可用）" class="headerlink" title="iOS FAT库打包（57后面的版本才可用）"></a>iOS FAT库打包（57后面的版本才可用）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./tools-webrtc/ios/build_ios_libs.sh --extra-gn-args=&apos;proprietary_codecs=true&apos;</div></pre></td></tr></table></figure>
 <p>默认生成根目录下 out_ios_libs/WebRTC.framework 文件</p>
 <h1 id="windows产生vs2015编译配置"><a href="#windows产生vs2015编译配置" class="headerlink" title="windows产生vs2015编译配置"></a>windows产生vs2015编译配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gn gen out/win_x64 -args=&quot;target_cpu=\&quot;x64\&quot; proprietary_codecs=true use_openh264=true ffmpeg_branding=\&quot;Chrome\&quot;&quot; --ide=vs</div><div class="line">gn gen out/win_x86 -args=&quot;target_cpu=\&quot;x86\&quot; proprietary_codecs=true use_openh264=true ffmpeg_branding=\&quot;Chrome\&quot;&quot; --ide=vs</div></pre></td></tr></table></figure>
@@ -368,6 +379,9 @@ xcod">
 <h1 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ninja -C out/debug</div></pre></td></tr></table></figure>
 <h1 id="查看编译配置参数"><a href="#查看编译配置参数" class="headerlink" title="查看编译配置参数"></a>查看编译配置参数</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gn args out/debug --list</div></pre></td></tr></table></figure>
 <h1 id="查看可用的target"><a href="#查看可用的target" class="headerlink" title="查看可用的target"></a>查看可用的target</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gn ls out/debug</div></pre></td></tr></table></figure>
+<h1 id="查看iOS本地签名uuid"><a href="#查看iOS本地签名uuid" class="headerlink" title="查看iOS本地签名uuid"></a>查看iOS本地签名uuid</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcrun security find-identity -v -p codesigning</div></pre></td></tr></table></figure>
+<h1 id="查看iOS-app签名信息"><a href="#查看iOS-app签名信息" class="headerlink" title="查看iOS app签名信息"></a>查看iOS app签名信息</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">codesign -vv -d AppRTCMobile.app</div></pre></td></tr></table></figure>
+<h1 id="查看iOS-app-provisoning信息"><a href="#查看iOS-app-provisoning信息" class="headerlink" title="查看iOS app provisoning信息"></a>查看iOS app provisoning信息</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mobileprovision-read -f AppRTCMobile.app/embedded.mobileprovision</div></pre></td></tr></table></figure>
 <h1 id="获取特定版本"><a href="#获取特定版本" class="headerlink" title="获取特定版本"></a>获取特定版本</h1><ul>
 <li>获取正式的版本：使用 <code>gclient sync</code> 下载完全部代码后，在代码目录下用 <code>git branch -a</code> 查看所有版本，并用<code>git checkout remotes/branch-heads/57</code> 获取57这个版本。</li>
 <li>获取某次commit的版本：使用 <code>gclient sync -r src@037ee92455a6e7fc01efb4397a6cdcf8e49389b4</code> 获取037ee92455a6e7fc01efb4397a6cdcf8e49389b4这个commit id的版本。</li>
@@ -570,7 +584,7 @@ xcod">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#iOS产生xcode项目"><span class="nav-number">1.</span> <span class="nav-text">iOS产生xcode项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#iOS-FAT库打包（57后面的版本才可用）"><span class="nav-number">2.</span> <span class="nav-text">iOS FAT库打包（57后面的版本才可用）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#windows产生vs2015编译配置"><span class="nav-number">3.</span> <span class="nav-text">windows产生vs2015编译配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android产生编译配置"><span class="nav-number">4.</span> <span class="nav-text">Android产生编译配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android-aar打包（57后面的版本才可用）"><span class="nav-number">5.</span> <span class="nav-text">Android aar打包（57后面的版本才可用）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android产生Android-Studio编译配置"><span class="nav-number">6.</span> <span class="nav-text">Android产生Android Studio编译配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编译"><span class="nav-number">7.</span> <span class="nav-text">编译</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看编译配置参数"><span class="nav-number">8.</span> <span class="nav-text">查看编译配置参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看可用的target"><span class="nav-number">9.</span> <span class="nav-text">查看可用的target</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取特定版本"><span class="nav-number">10.</span> <span class="nav-text">获取特定版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">11.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#iOS产生xcode项目"><span class="nav-number">1.</span> <span class="nav-text">iOS产生xcode项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#iOS-FAT库打包（57后面的版本才可用）"><span class="nav-number">2.</span> <span class="nav-text">iOS FAT库打包（57后面的版本才可用）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#windows产生vs2015编译配置"><span class="nav-number">3.</span> <span class="nav-text">windows产生vs2015编译配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android产生编译配置"><span class="nav-number">4.</span> <span class="nav-text">Android产生编译配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android-aar打包（57后面的版本才可用）"><span class="nav-number">5.</span> <span class="nav-text">Android aar打包（57后面的版本才可用）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Android产生Android-Studio编译配置"><span class="nav-number">6.</span> <span class="nav-text">Android产生Android Studio编译配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编译"><span class="nav-number">7.</span> <span class="nav-text">编译</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看编译配置参数"><span class="nav-number">8.</span> <span class="nav-text">查看编译配置参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看可用的target"><span class="nav-number">9.</span> <span class="nav-text">查看可用的target</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看iOS本地签名uuid"><span class="nav-number">10.</span> <span class="nav-text">查看iOS本地签名uuid</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看iOS-app签名信息"><span class="nav-number">11.</span> <span class="nav-text">查看iOS app签名信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看iOS-app-provisoning信息"><span class="nav-number">12.</span> <span class="nav-text">查看iOS app provisoning信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取特定版本"><span class="nav-number">13.</span> <span class="nav-text">获取特定版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">14.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
           </div>
         </section>

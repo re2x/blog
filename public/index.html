@@ -237,6 +237,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-webrtc-wiki">
+          <a href="http://www.re2x.com/WebRTC-wiki" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            menu.webrtc-wiki
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -290,8 +300,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-03T10:03:03+08:00" content="2017-03-03">
-              2017-03-03
+            <time itemprop="dateCreated" datetime="2017-03-08T11:08:03+08:00" content="2017-03-08">
+              2017-03-08
             </time>
           </span>
 
@@ -347,7 +357,7 @@
         
           <p>本文不涉及获编译相关，此类内容请看 <a href="/blog/webrtc-build-cmd/">WebRTC 编译笔记</a></p>
 <h1 id="什么是WebRTC"><a href="#什么是WebRTC" class="headerlink" title="什么是WebRTC"></a>什么是WebRTC</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h3 id="如何实现一个点对点的音视频通话"><a href="#如何实现一个点对点的音视频通话" class="headerlink" title="如何实现一个点对点的音视频通话"></a>如何实现一个点对点的音视频通话</h3><ul>
-<li><p>Native 实现<br>摄像头访问、编解码、降噪、通讯、渲染、优化</p>
+<li><p>Native 实现<br>摄像头访问、编解码、降噪、信令、数据通讯、渲染、优化</p>
 </li>
 <li><p>web 实现<br>Flash</p>
 </li>
@@ -483,6 +493,7 @@
         
           <h1 id="iOS产生xcode项目"><a href="#iOS产生xcode项目" class="headerlink" title="iOS产生xcode项目"></a>iOS产生xcode项目</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gn gen out/ios64 -args=&quot;target_os=\&quot;ios\&quot; target_cpu=\&quot;x64\&quot; is_component_build=false proprietary_codecs=true ios_enable_code_signing=false&quot; --ide=xcode</div></pre></td></tr></table></figure>
 <p>xcode项目文件位置 out/ios64/all.workspace ，项目包含多个TARGETS,其中AppRTCMobile是apprtc的ios版本</p>
+<p><strong>iOS真机调试必须ios_enable_code_signing=true，target_cpu=arm或target_cpu=arm64。<br /><br>如果存在多个签名要增加参数ios_code_signing_identity=[UUID]，具体这个UUID请 <a href="#查看iOS本地签名uuid">查看iOS本地签名uuid</a></strong></p>
 <h1 id="iOS-FAT库打包（57后面的版本才可用）"><a href="#iOS-FAT库打包（57后面的版本才可用）" class="headerlink" title="iOS FAT库打包（57后面的版本才可用）"></a>iOS FAT库打包（57后面的版本才可用）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./tools-webrtc/ios/build_ios_libs.sh --extra-gn-args=&apos;proprietary_codecs=true&apos;</div></pre></td></tr></table></figure>
 <p>默认生成根目录下 out_ios_libs/WebRTC.framework 文件</p>
 <h1 id="windows产生vs2015编译配置"><a href="#windows产生vs2015编译配置" class="headerlink" title="windows产生vs2015编译配置"></a>windows产生vs2015编译配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gn gen out/win_x64 -args=&quot;target_cpu=\&quot;x64\&quot; proprietary_codecs=true use_openh264=true ffmpeg_branding=\&quot;Chrome\&quot;&quot; --ide=vs</div><div class="line">gn gen out/win_x86 -args=&quot;target_cpu=\&quot;x86\&quot; proprietary_codecs=true use_openh264=true ffmpeg_branding=\&quot;Chrome\&quot;&quot; --ide=vs</div></pre></td></tr></table></figure>
