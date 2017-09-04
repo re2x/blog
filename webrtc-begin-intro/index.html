@@ -1,92 +1,16 @@
-<!doctype html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
+  <meta charset="utf-8">
+  
+  <title>WebRTC 入门介绍 | rex_log | print &quot;hello world&quot;</title>
 
   
-  
-  <link href="/blog/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
+  <meta name="author" content="rex_lin">
   
 
   
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/blog/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/blog/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="WebRTC,Android,混合iOS,编译," />
-
-
-
-
-
-  <link rel="alternate" href="/blog/atom.xml" title="rex_log" type="application/atom+xml" />
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/blog/favicon.ico?v=5.0.1" />
-
-
-
-
-
-
-<meta name="description" content="本文不涉及获编译相关，此类内容请看 WebRTC 编译笔记
+  <meta name="description" content="本文不涉及获编译相关，此类内容请看 WebRTC 编译笔记
 什么是WebRTC背景如何实现一个点对点的音视频通话
 Native 实现摄像头访问、编解码、降噪、信令、数据通讯、渲染、优化
 
@@ -94,295 +18,93 @@ web 实现Flash
 
 
 WebRTC是什么
-网页即时通信（英语：Web Real-Time Communication）的缩写，是一个支持网页浏览器进行实时语音对话或视频对话的API。它于2011年6月1日开">
-<meta property="og:type" content="article">
-<meta property="og:title" content="WebRTC 入门介绍">
-<meta property="og:url" content="https://re2x.com/webrtc-begin-intro/index.html">
-<meta property="og:site_name" content="rex_log">
-<meta property="og:description" content="本文不涉及获编译相关，此类内容请看 WebRTC 编译笔记
-什么是WebRTC背景如何实现一个点对点的音视频通话
-Native 实现摄像头访问、编解码、降噪、信令、数据通讯、渲染、优化
+网页即时通信（英语：Web Real-Time Communication）的缩写，是一个支持网页浏览器进行实时语音对话或视频对话的API。它于2011年6月1日开源并在Google、Mozilla、Opera支持下被纳入万维网联盟的W3C推荐标准。
 
-web 实现Flash
+我们说的WebRTC是
+2010年5月，Google以6820万美元收购VoIP软件开发商Global IP Solutions的GIPS引擎，并改为名为“WebRTC”。WebRTC使用GIPS引擎，实现了基于网页的视频会议，并支持722，PCM，ILBC，ISAC等编码，同时使用谷歌自家的VP8视频解码器；同时支持RTP/SRTP传输等。
 
+现状支持检测是否支持">
+  
 
-WebRTC是什么
-网页即时通信（英语：Web Real-Time Communication）的缩写，是一个支持网页浏览器进行实时语音对话或视频对话的API。它于2011年6月1日开">
-<meta property="og:image" content="https://re2x.com/blog/post_images/webrtc_support.png">
-<meta property="og:image" content="https://re2x.com/blog/post_images/WebRTCNativeAPIsDocument.png">
-<meta property="og:image" content="https://re2x.com/blog/post_images/WebRTCNativeAPIsDocument%20%281%29.png">
-<meta property="og:image" content="https://re2x.com/blog/post_images/WebRTCNativeAPIsDocument%20%282%29.png">
-<meta property="og:image" content="https://re2x.com/blog/post_images/WebRTCNativeAPIsDocument%20%283%29.png">
-<meta property="og:image" content="https://re2x.com/blog/post_images/stun-progress.png">
-<meta property="og:updated_time" content="2017-03-08T05:57:33.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WebRTC 入门介绍">
-<meta name="twitter:description" content="本文不涉及获编译相关，此类内容请看 WebRTC 编译笔记
-什么是WebRTC背景如何实现一个点对点的音视频通话
-Native 实现摄像头访问、编解码、降噪、信令、数据通讯、渲染、优化
+  
+  
+  <meta name="keywords" content="WebRTC,Android,混合iOS,编译">
+  
 
-web 实现Flash
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+  <meta property="og:title" content="WebRTC 入门介绍"/>
 
-WebRTC是什么
-网页即时通信（英语：Web Real-Time Communication）的缩写，是一个支持网页浏览器进行实时语音对话或视频对话的API。它于2011年6月1日开">
-<meta name="twitter:image" content="https://re2x.com/blog/post_images/webrtc_support.png">
+  <meta property="og:site_name" content="rex_log"/>
 
+  
+  <meta property="og:image" content="/blog/favicon.ico"/>
+  
 
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Muse',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: 6307453745156326000,
-      author: '作者'
-    }
-  };
-</script>
-
-
-
-
-  <link rel="canonical" href="https://re2x.com/webrtc-begin-intro/"/>
-
-  <title> WebRTC 入门介绍 | rex_log </title>
+  <link href="/blog/favicon.ico" rel="icon">
+  <link rel="alternate" href="/blog/atom.xml" title="rex_log" type="application/atom+xml">
+  <link rel="stylesheet" href="/blog/css/style.css" media="screen" type="text/css">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  
+<body>
+<div class="blog">
+  <div class="content">
 
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-80940904-1', 'auto');
-  ga('send', 'pageview');
-</script>
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/blog/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">rex_log</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/blog/">rex_log</a>
+    </h1>
+    <p class="site-description">print &quot;hello world&quot;</p>
   </div>
-  <p class="site-subtitle">print "hello world"</p>
-</div>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
+  <nav class="site-navigation">
+    <ul>
       
-        
-        <li class="menu-item menu-item-home">
-          <a href="/blog/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
+        <li><a href="/blog/404.html">404</a></li>
       
-        
-        <li class="menu-item menu-item-about">
-          <a href="/blog/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
+        <li><a href="/blog/">主页</a></li>
       
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/blog/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
+        <li><a href="/blog/about">关于</a></li>
       
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/blog/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
+        <li><a href="/blog/categories">分类</a></li>
       
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/blog/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
+        <li><a href="/blog/tags">标签</a></li>
       
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/blog/404.html" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
-            
-            404
-          </a>
-        </li>
+        <li><a href="/blog/archives">归档</a></li>
       
-        
-        <li class="menu-item menu-item-webrtc-wiki">
-          <a href="http://www.re2x.com/WebRTC-wiki" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            WebRTC-wiki
-          </a>
-        </li>
-      
-
+        <li><a href="http://www.re2x.com/WebRTC-wiki">WebRTC-wiki</a></li>
       
     </ul>
-  
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
 
   
-</nav>
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
     
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
+    <h3 class="article-title"><span>WebRTC 入门介绍</span></h3>
     
-      <header class="post-header">
+  
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                WebRTC 入门介绍
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-08T11:08:03+08:00" content="2017-03-08">
-              2017-03-08
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/blog/categories/WebRTC/" itemprop="url" rel="index">
-                    <span itemprop="name">WebRTC</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/blog/webrtc-begin-intro/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="webrtc-begin-intro/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/blog/webrtc-begin-intro/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-03-08T03:08:03.000Z">
+          2017-03-08
+        </time>
+      </a>
+    </span>
+  </div>
 
 
-    <div class="post-body" itemprop="articleBody">
+  
 
-      
-      
-
+  <div class="article-content">
+    <div class="entry">
       
         <p>本文不涉及获编译相关，此类内容请看 <a href="/blog/webrtc-build-cmd/">WebRTC 编译笔记</a></p>
 <h1 id="什么是WebRTC"><a href="#什么是WebRTC" class="headerlink" title="什么是WebRTC"></a>什么是WebRTC</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h3 id="如何实现一个点对点的音视频通话"><a href="#如何实现一个点对点的音视频通话" class="headerlink" title="如何实现一个点对点的音视频通话"></a>如何实现一个点对点的音视频通话</h3><ul>
@@ -566,346 +288,78 @@ WebRTC是什么
       
     </div>
 
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/blog/tags/WebRTC/" rel="tag">#WebRTC</a>
-          
-            <a href="/blog/tags/Android/" rel="tag">#Android</a>
-          
-            <a href="/blog/tags/混合iOS/" rel="tag">#混合iOS</a>
-          
-            <a href="/blog/tags/编译/" rel="tag">#编译</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/blog/webrtc-build-cmd/" rel="next" title="WebRTC 编译笔记">
-                <i class="fa fa-chevron-left"></i> WebRTC 编译笔记
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/wireshark-udp-sender/" rel="prev" title="UDP重发WireShark抓包数据">
-                UDP重发WireShark抓包数据 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
+  <div class="article-footer">
+    <div class="article-meta pull-left">
 
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="webrtc-begin-intro/"
-           data-title="WebRTC 入门介绍" data-url="https://re2x.com/blog/webrtc-begin-intro/">
-      </div>
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/blog/categories/WebRTC/">WebRTC</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/blog/tags/WebRTC/">WebRTC</a><a href="/blog/tags/Android/">Android</a><a href="/blog/tags/混合iOS/">混合iOS</a><a href="/blog/tags/编译/">编译</a>
+    </span>
+    
+
+    </div>
+
     
   </div>
+</article>
 
-
-        </div>
-        
-          
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
+	<section id="comments" class="comment">
+	  <div id="disqus_thread">
+	  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  </div>
+	</section>
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="https://secure.gravatar.com/avatar/2b5635fbaf87d41193667e593132c5c2?s=140"
-               alt="rex_lin" />
-          <p class="site-author-name" itemprop="name">rex_lin</p>
-          <p class="site-description motion-element" itemprop="description"></p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/blog/archives">
-              <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
-
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/blog/categories">
-                <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/blog/tags">
-                <span class="site-state-item-count">17</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-          <div class="feed-link motion-element">
-            <a href="/blog/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/re2x" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://twitter.com/rex_lin" target="_blank" title="Twitter">
-                  
-                    <i class="fa fa-fw fa-twitter"></i>
-                  
-                  Twitter
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是WebRTC"><span class="nav-number">1.</span> <span class="nav-text">什么是WebRTC</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.1.</span> <span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何实现一个点对点的音视频通话"><span class="nav-number">1.1.1.</span> <span class="nav-text">如何实现一个点对点的音视频通话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WebRTC是什么"><span class="nav-number">1.1.2.</span> <span class="nav-text">WebRTC是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我们说的WebRTC是"><span class="nav-number">1.1.3.</span> <span class="nav-text">我们说的WebRTC是</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#现状"><span class="nav-number">1.2.</span> <span class="nav-text">现状</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#支持"><span class="nav-number">1.2.1.</span> <span class="nav-text">支持</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WebRTC流程"><span class="nav-number">2.</span> <span class="nav-text">WebRTC流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#说说ICE"><span class="nav-number">2.1.</span> <span class="nav-text">说说ICE</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NAT-网络地址转换"><span class="nav-number">2.1.1.</span> <span class="nav-text">NAT 网络地址转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#STUN-穿透"><span class="nav-number">2.1.2.</span> <span class="nav-text">STUN 穿透</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TURN-中转"><span class="nav-number">2.1.3.</span> <span class="nav-text">TURN 中转</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我们的目标"><span class="nav-number">3.</span> <span class="nav-text">我们的目标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#我们要做什么"><span class="nav-number">3.1.</span> <span class="nav-text">我们要做什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一阶段目标"><span class="nav-number">3.2.</span> <span class="nav-text">第一阶段目标</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码分析"><span class="nav-number">4.</span> <span class="nav-text">代码分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目结构"><span class="nav-number">4.1.</span> <span class="nav-text">项目结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译"><span class="nav-number">4.2.</span> <span class="nav-text">编译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎么看代码"><span class="nav-number">4.3.</span> <span class="nav-text">怎么看代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码管理"><span class="nav-number">4.4.</span> <span class="nav-text">代码管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#典型模块"><span class="nav-number">4.5.</span> <span class="nav-text">典型模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#演示"><span class="nav-number">4.6.</span> <span class="nav-text">演示</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#H264与WebRTC的历史"><span class="nav-number">5.</span> <span class="nav-text">H264与WebRTC的历史</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初步计划"><span class="nav-number">6.</span> <span class="nav-text">初步计划</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎么做"><span class="nav-number">7.</span> <span class="nav-text">怎么做</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#讨论"><span class="nav-number">8.</span> <span class="nav-text">讨论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">9.</span> <span class="nav-text">参考</span></a></li></ol></div>
-            
-          </div>
-        </section>
-      
-
-    </div>
-  </aside>
+	<script type="text/javascript">
+	var disqus_shortname = 'null';
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	</script>
 
 
-        
-      </div>
+
+
+
     </main>
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">rex_lin</span>
-</div>
-
-<div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
-
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
-  </a>
-</div>
-
-<!-- <a class="theme-link" href="https://www.upyun.com"><img src="https://www.upyun.com/assets/league/90X45.png" /></a> -->
-        
-
-        
-      </div>
-    </footer>
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2017 rex_lin
+    
+  </p>
+</footer>
+    
   </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-  
-  <script type="text/javascript" src="/blog/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/blog/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/blog/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/blog/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/blog/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/blog/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.0.1"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.0.1"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.0.1"></script>
-
-
-
-  
-
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"rexlog"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
-    
-    <script src="/blog/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/blog/js/src/hook-duoshuo.js"></script>
-  
-
-
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
-
+</div>
 </body>
 </html>
